@@ -1,4 +1,4 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Image  } from "@chakra-ui/react";
 
 export function About() {
     return(
@@ -10,10 +10,8 @@ export function About() {
                 width='100%'
                 my='6'
                 maxWidth={1480}
-                minChieldWidth='320px'
                 align='flex-start'
             >
-
             </Flex>
         </Flex>
     )
