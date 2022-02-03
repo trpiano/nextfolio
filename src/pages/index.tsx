@@ -1,6 +1,6 @@
 import { Flex } from '@chakra-ui/react'
-import { About } from '../components/About/about';
-import { Header } from "../components/Header/header";
+import { About } from '../components/About';
+import { Header } from "../components/Header";
 
 export default function Home() {
   return (
