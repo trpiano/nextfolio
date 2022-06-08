@@ -1,75 +1,40 @@
-import { Box, Button, Flex, Icon, Image, Text} from "@chakra-ui/react";
 import Head from "next/head";
 
 import { FaPlay } from "react-icons/fa";
-import { IconsRow } from "./IconsRow";
+import { IconsRow } from "./components/IconsRow";
+
+import {
+  Container,
+  BoxContainer,
+  ButtonsContainer,
+  PortfolioButton,
+  VideoButton,
+} from "./styles";
 
 export function About() {
-    return(
-        <>
-            <Head>
-                <title>Timóteo | Personal Portfolio</title>
-            </Head>
+  return (
+    <>
+      <Head>
+        <title>Timóteo | Personal Portfolio</title>
+      </Head>
 
-            <Flex
-                maxWidth="1120px"
-                m="0 auto"
-                p="0 2rem"
-                height="calc(120vh - 5rem)"
-                display="flex"
-                align-items="center"
-                justifyContent="space-between"
-            >
-                <Box
-                >
+      <Container>
+        <BoxContainer>
+          <IconsRow />
 
-                    <IconsRow />
+          <h1>Oi, sou Timóteo Piano</h1>
+          <p>Desenvolvedor Front-End Junior 👨‍💻👋</p>
 
-                    <Text 
-                        as="h1"
-                        fontSize="62"
-                        fontWeight="700"
-                    >
-                        Oi, sou Timóteo Piano
-                    </Text>
-                    <Text 
-                        as="p"
-                        fontSize="26"
-                        fontWeight="300"
-                    >
-                        Desenvolvedor Front-End Junior 👨‍💻👋
-                    </Text>
+          <ButtonsContainer>
+            <PortfolioButton onClick={() => {}}>Meu Portfolio</PortfolioButton>
+            <VideoButton>
+              <FaPlay />
+            </VideoButton>
+          </ButtonsContainer>
+        </BoxContainer>
 
-                    <Button
-                        colorScheme='red'
-                        variant='outline'
-                        borderRadius="25"
-                        p="6"
-
-                        _hover_={{bg: '#e53e3e'}}
-                    >
-                        Meu Portfolio
-                    </Button>
-                    <Button
-                        colorScheme='red'
-                        borderRadius="25"
-                        p="6"
-                        centerIcon={<FaPlay />}
-                    >
-                        <Icon 
-                            as={FaPlay}
-                            fontSize="20"
-                            m="4"
-                        />
-                    </Button>
-                </Box>
-
-                <Image 
-                    src="/images/profile.png"
-                    w="450"
-                    h="600"
-                />
-            </Flex>
-        </>
-    )
+        <img src="/images/profile.png"/>
+      </Container>
+    </>
+  );
 }

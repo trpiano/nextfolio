@@ -8,19 +8,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/core": "^0.8.0",
-    "@chakra-ui/react": "^1.7.2",
-    "@emotion/react": "^11.6.0",
-    "@emotion/styled": "^11.6.0",
     "@types/node": "^16.11.10",
     "@types/react": "^17.0.37",
-    "framer-motion": "^5.3.3",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.3.1",
-    "sass": "^1.43.5",
-    "styled-components": "^5.3.3",
+    "styled-components": "^5.3.5",
     "typescript": "^4.5.2"
   },
   "devDependencies": {
