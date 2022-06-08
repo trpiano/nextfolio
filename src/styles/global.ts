@@ -8,9 +8,10 @@ export const GlobalStyle = createGlobalStyle`
 
         --red-500: #E53E3E;
 
-        --red-500-08filter: rgba(229, 62, 62, 0.8);
+        --red-500-filter: rgba(229, 62, 62, 0.8);
 
         --white: #fff;
+
         --black: #000;
     }
     

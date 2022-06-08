@@ -3,20 +3,20 @@ import {
   RiUser2Fill,
   RiCodeBoxFill,
   RiBookmark3Fill,
-  RiFocus2Line,
   RiMailFill,
-  RiArrowDownSFill,
   RiBook2Fill,
 } from "react-icons/ri";
-import { GiBrazilFlag } from "react-icons/gi";
 
 import {
   Container,
   HeaderButton,
   ButtonContainer,
   ContactButton,
-  FlagLanguageSelector,
 } from "./styles";
+
+import { LangPicker } from './LanguagePicker'
+
+import { i18next } from "../../translate/i18n";
 
 export function Header() {
   return (
@@ -27,36 +27,29 @@ export function Header() {
       <ButtonContainer>
         <HeaderButton>
           <RiHome2Fill />
-          Início
-        </HeaderButton>
-        <HeaderButton>
-          <RiFocus2Line />
-          Serviços
+          {i18next.t('navbar.home')}
         </HeaderButton>
         <HeaderButton>
           <RiUser2Fill />
-          Sobre
+          {i18next.t('navbar.about')}
         </HeaderButton>
         <HeaderButton>
           <RiBookmark3Fill />
-          Habilidades
+          {i18next.t('navbar.skills')}
         </HeaderButton>
         <HeaderButton>
           <RiCodeBoxFill />
-          Portfolio
+          {i18next.t('navbar.projects')}
         </HeaderButton>
         <HeaderButton>
           <RiBook2Fill />
-          Blog
+          {i18next.t('navbar.blog')}
         </HeaderButton>
         <ContactButton>
           <RiMailFill />
-          Contatar
+          {i18next.t('navbar.contact')}
         </ContactButton>
-        <FlagLanguageSelector onClick={() => {}}>
-          <GiBrazilFlag />
-          <RiArrowDownSFill />
-        </FlagLanguageSelector>
+        <LangPicker />
       </ButtonContainer>
     </Container>
   );

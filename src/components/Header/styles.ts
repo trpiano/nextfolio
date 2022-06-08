@@ -26,17 +26,15 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
-
-  button {
-    padding: 0 0.5rem;
-    margin: 0 0.5rem;
-  }
 `;
 
 export const HeaderButton = styled.button`
   background: transparent;
   border: none;
   border-radius: 0.5rem;
+
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
 
   color: var(--white);
 
@@ -65,6 +63,9 @@ export const ContactButton = styled.button`
   border: none;
   border-radius: 0.5rem;
 
+  padding: 0 0.5rem;
+  margin: 0 0.5rem;
+
   color: var(--white);
 
   display: flex;
@@ -82,37 +83,6 @@ export const ContactButton = styled.button`
   transition: background 0.2s;
 
   :hover {
-    background: var(--red-500-08filter);
-  }
-`;
-
-export const FlagLanguageSelector = styled.button`
-  background: transparent;
-  border: none;
-  border-radius: 0.5rem;
-
-  color: var(--white);
-
-  display: flex;
-  align-items: center;
-
-  font-size: 1.075rem;
-  font-weight: 700;
-
-  height: 40px;
-
-  svg {
-    margin-right: 0.875rem;
-  }
-
-  svg:last-child {
-    margin-right: 0;
-  }
-
-  transition: background 0.2s;
-
-  :hover {
-    background: var(--red-500);
-    border-radius: 0.5rem;
+    background: var(--red-500-filter);
   }
 `;
