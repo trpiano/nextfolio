@@ -39,11 +39,15 @@ export const HeaderContainer = styled.div`
 `;
 
 export const CardsContainer = styled.div`
-    width: 100%;
+  width: 100%;
 
-    padding: 2rem 0;
+  padding: 2rem 0;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
-`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+
+  @media (max-width: 720px) {
+    grid-template-columns: 1fr 1fr;
+  }
+`;
