@@ -26,11 +26,13 @@ export function Card({
           <>
             <div className="staticImage">
               <picture>
+                <source srcSet={image} type="image/png" />
                 <img src={image} alt={imageAlt} />
               </picture>
             </div>
             <div className="animatedImage">
               <picture>
+                <source srcSet={animatedImage} type="image/gif" />
                 <img src={animatedImage} alt={imageAlt} />
               </picture>
             </div>
