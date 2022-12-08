@@ -1,5 +1,3 @@
-import { MdOutlineBusinessCenter } from "react-icons/md";
-
 import { Card } from "./Cards";
 import {
   Container,
