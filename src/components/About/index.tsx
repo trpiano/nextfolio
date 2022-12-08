@@ -36,8 +36,8 @@ export function About() {
             animatedImage="/images/icons/browser.gif"
             image="/images/icons/browser.png"
             imageAlt="Browser Image"
-            title="Business Stratagy"
-            description=" We’ll help you optimize your business processes to maximize profitability and eliminate unnecessary costs."
+            title="SEO Optimisation"
+            description="Your website ranking matters. Our SEO services will help you get to the top of the ranks and stay there!"
           />
           <Card
             isAnimated={true}
@@ -60,8 +60,8 @@ export function About() {
             animatedImage="/images/icons/browser.gif"
             image="/images/icons/browser.png"
             imageAlt="Browser Image"
-            title="Business Stratagy"
-            description=" We’ll help you optimize your business processes to maximize profitability and eliminate unnecessary costs."
+            title="SEO Optimisation"
+            description="Your website ranking matters. Our SEO services will help you get to the top of the ranks and stay there!"
           />
         </CardsContainer>
       </MainContent>
