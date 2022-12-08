@@ -25,10 +25,14 @@ export function Card({
         ? 
           <>
             <div className="staticImage">
-              <img src={image} alt={imageAlt} />
+              <picture>
+                <img src={image} alt={imageAlt} />
+              </picture>
             </div>
             <div className="animatedImage">
-              <img src={animatedImage} alt={imageAlt} />
+              <picture>
+                <img src={animatedImage} alt={imageAlt} />
+              </picture>
             </div>
           </> 
         : 
