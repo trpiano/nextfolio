@@ -2,15 +2,18 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --background: #1F2029;
+        --background: #212529;
 
         --pink-500: #D53F8C;
 
+        --red-450:#f9004d;
         --red-500: #E53E3E;
 
         --red-500-filter: rgba(229, 62, 62, 0.8);
 
         --white: #fff;
+
+        --white-text: #c4cfde;
 
         --black: #000;
     }
