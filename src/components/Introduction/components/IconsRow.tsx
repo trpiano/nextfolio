@@ -14,7 +14,7 @@ export function IconsRow() {
       <SocialButton
         label="Github"
         onClick={() => {
-          window.open("https://github.com/trpiano/", "_blank");
+          window.open(process.env.NEXT_PUBLIC_GITHUB_URL , "_blank");
         }}
       >
         <FaGithub />
@@ -22,7 +22,7 @@ export function IconsRow() {
       <SocialButton
         label="LinkedIn"
         onClick={() => {
-          window.open("https://www.linkedin.com/in/timoteopiano/", "_blank");
+          window.open(process.env.NEXT_PUBLIC_LINKEDIN_URL , "_blank");
         }}
       >
         <FaLinkedinIn />
@@ -30,7 +30,7 @@ export function IconsRow() {
       <SocialButton
         label="Instagram"
         onClick={() => {
-          window.open("https://instagram.com/timoteopiano.dev", "_blank");
+          window.open(process.env.NEXT_PUBLIC_INSTAGRAM_URL , "_blank");
         }}
       >
         <FaInstagram />
@@ -38,7 +38,7 @@ export function IconsRow() {
       <SocialButton
         label="WhatsApp"
         onClick={() => {
-          window.open("https://wa.me/message/Z4NS6IN6UUL5M1", "_blank");
+          window.open(process.env.NEXT_PUBLIC_WHATSAPP_URL , "_blank");
         }}
       >
         <FaWhatsapp />
@@ -46,7 +46,7 @@ export function IconsRow() {
       <SocialButton
         label="Telegram"
         onClick={() => {
-          window.open("https://t.me/trpiano", "_blank");
+          window.open(process.env.NEXT_PUBLIC_TELEGRAM_URL , "_blank");
         }}
       >
         <FaTelegramPlane />

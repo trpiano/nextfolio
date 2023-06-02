@@ -12,7 +12,7 @@ import {
   VideoButton,
 } from "./styles";
 
-export function Home() {
+export function Introduction() {
   return (
     <>
       <Head>

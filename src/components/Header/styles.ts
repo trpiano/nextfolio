@@ -16,6 +16,8 @@ export const Container = styled.header`
     font-weight: 700;
     color: var(--white);
 
+    user-select: none;
+
     span {
       color: var(--pink-500);
     }
@@ -37,6 +39,8 @@ export const HeaderButton = styled.button`
   margin: 0 0.5rem;
 
   color: var(--white);
+
+  user-select: none;
 
   display: flex;
   align-items: center;
@@ -62,6 +66,8 @@ export const ContactButton = styled.button`
   background: var(--red-500);
   border: none;
   border-radius: 0.5rem;
+
+  user-select: none;
 
   padding: 0 0.5rem;
   margin: 0 0.5rem;

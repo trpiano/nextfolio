@@ -1,12 +1,13 @@
-import i18next from "i18next";
-import LanguageDetector from "i18next-browser-languagedetector";
+import i18next from 'i18next'
+import LanguageDetectors from 'i18next-browser-languagedetector'
 
-import { messages } from "."
+import { messages } from '.'
 
-i18next.use(LanguageDetector).init({
-    lng: 'enUs',
-    debug: false,
-    resources: messages,
-});
+i18next
+    .use(LanguageDetectors)
+    .init({
+        debug: false,
+        resources: messages
+    })
 
 export { i18next }

@@ -10,7 +10,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  img{
+  img {
     width: 450px;
     height: 600px;
   }
@@ -99,6 +99,10 @@ export const SocialButtonContainer = styled.div`
 `;
 
 export const SocialButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
   border: 1px solid var(--red-500);
 

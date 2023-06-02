@@ -8,10 +8,11 @@ const messages = {
                 projects: "Projects",
                 blog: "Blog",
                 contact: "Contact",
+                language: 'english'
             },
             home:{
                 title: "Hi, I am Timóteo Piano",
-                description: "Front-End Developer Junior 👨‍💻👋",
+                description: "Front-End | Full-Stack Developer 👨‍💻👋",
                 portfolioButton: "My Portfolio",
             },
             about:{
