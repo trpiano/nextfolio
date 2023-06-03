@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 1120px;
   width: 100%;
-  height: calc(100vh - 105px);
+  height: calc(100vh);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 5rem 2rem 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,19 +50,19 @@ export const PortfolioButton = styled.button`
   background: transparent;
 
   border-radius: 1.5rem;
-  border: 1px solid var(--red-500);
+  border: 1px solid var(--blue-500);
 
-  color: var(--red-500);
+  color: var(--blue-500);
 
   font-size: 1rem;
   font-weight: 700;
 
   padding: 1rem;
 
-  transition: 0.2s;
+  transition: all 0.2s;
 
   :hover {
-    background: var(--red-500);
+    background: var(--blue-500);
     color: var(--black);
   }
 `;
@@ -70,7 +70,7 @@ export const PortfolioButton = styled.button`
 export const VideoButton = styled.button`
   height: 54px;
 
-  background: var(--red-500);
+  background: var(--blue-500);
 
   border-radius: 1.5rem;
   border: none;
@@ -88,7 +88,7 @@ export const VideoButton = styled.button`
   transition: 0.2s;
 
   :hover {
-    background: var(--red-500-filter);
+    filter: brightness(0.8);
   }
 `;
 
@@ -104,7 +104,7 @@ export const SocialButton = styled.button`
   justify-content: center;
 
   border-radius: 50%;
-  border: 1px solid var(--red-500);
+  border: 1px solid var(--blue-500);
 
   background: transparent;
 
@@ -114,7 +114,7 @@ export const SocialButton = styled.button`
     height: 20px;
     width: 20px;
 
-    color: var(--red-500);
+    color: var(--blue-500);
   }
 
   transition: 0.2s;
@@ -124,6 +124,6 @@ export const SocialButton = styled.button`
       color: var(--black);
     }
 
-    background: var(--red-500);
+    background: var(--blue-500);
   }
 `;

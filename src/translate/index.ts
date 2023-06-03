@@ -1,9 +1,9 @@
-import { messages as portugueseBrMessages } from './languages/pt-br'
-import { messages as englishUSMessages } from './languages/en-us'
+import { messages as ptBr } from './languages/pt-br'
+import { messages as enUs } from './languages/en-us'
 
 const messages = {
-    ...portugueseBrMessages,
-    ...englishUSMessages,
+    ...ptBr,
+    ...enUs,
 }
 
 export { messages }

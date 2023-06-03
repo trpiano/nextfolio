@@ -6,6 +6,8 @@ export const GlobalStyle = createGlobalStyle`
 
         --pink-500: #D53F8C;
 
+        --blue-500: #31bcbe;
+
         --red-450:#f9004d;
         --red-500: #E53E3E;
 
@@ -40,7 +42,7 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: 600;
     }
     body { 
-        background: var(--background);
+        background: linear-gradient(0deg, rgba(61,90,128,1) 14%, rgba(33,37,41,1) 100%);
         -webkit-font-smoothing: antialiased;
     }
     button {

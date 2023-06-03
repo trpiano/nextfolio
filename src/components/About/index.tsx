@@ -1,69 +1,56 @@
-import { Card } from "./Cards";
+import Lottie from "react-lottie";
+
+import animationComputer from "../../assets/animations/computer.json";
+
 import {
   Container,
   MainContent,
   HeaderContainer,
-  CardsContainer,
+  ContentContainer,
+  TextContainer,
+  AnimationContainer,
 } from "./styles";
 
 export function About() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationComputer,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
+  const animationWidth = "100%";
+  const animationHeight = "100%";
+
   return (
     <Container>
       <MainContent>
         <HeaderContainer>
-          <span>FEATURES</span>
-          <h2>What I Do</h2>
+          <h2>About Me</h2>
         </HeaderContainer>
-        <CardsContainer>
-          <Card
-            isAnimated={true}
-            animatedImage="/images/icons/handshake.gif"
-            image="/images/icons/handshake.png"
-            imageAlt="HandShake Image"
-            title="Business Stratagy"
-            description="I throw myself down among the tall grass by the stream as Ilie close to the earth."
-          />
-          <Card
-            isAnimated={true}
-            animatedImage="/images/icons/responsive.gif"
-            image="/images/icons/responsive.png"
-            imageAlt="Responsive Image"
-            title="App Development"
-            description=" We’ll handle everything from to app development process until it is time to make your project live. "
-          />
-          <Card
-            isAnimated={true}
-            animatedImage="/images/icons/browser.gif"
-            image="/images/icons/browser.png"
-            imageAlt="Browser Image"
-            title="SEO Optimisation"
-            description="Your website ranking matters. Our SEO services will help you get to the top of the ranks and stay there!"
-          />
-          <Card
-            isAnimated={true}
-            animatedImage="/images/icons/handshake.gif"
-            image="/images/icons/handshake.png"
-            imageAlt="HandShake Image"
-            title="Business Stratagy"
-            description="I throw myself down among the tall grass by the stream as Ilie close to the earth."
-          />
-          <Card
-            isAnimated={true}
-            animatedImage="/images/icons/responsive.gif"
-            image="/images/icons/responsive.png"
-            imageAlt="Responsive Image"
-            title="App Development"
-            description=" We’ll handle everything from to app development process until it is time to make your project live. "
-          />
-          <Card
-            isAnimated={true}
-            animatedImage="/images/icons/browser.gif"
-            image="/images/icons/browser.png"
-            imageAlt="Browser Image"
-            title="SEO Optimisation"
-            description="Your website ranking matters. Our SEO services will help you get to the top of the ranks and stay there!"
-          />
-        </CardsContainer>
+        <ContentContainer>
+          <AnimationContainer>
+            <Lottie
+              options={defaultOptions}
+              height={animationHeight}
+              width={animationWidth}
+            />
+          </AnimationContainer>
+          <TextContainer>
+            <p>
+              Prazer, me chamo Timóteo, tenho 23 anos e sou natural de Paraguaçu
+              Paulista, mas atualmente moro em Presidente Prudente, interior de
+              São Paulo. Sou formado em Sistema de Informação de Universidade
+              Anhanguera, onde conclui o curso por uma bolsa integrar do PROUNI.
+              Atuo como desenvolvedor front-end, utilizando ReactJS, NextJS,
+              Styled-Components e outros libs. Sempre buscando me aprimorar em
+              relação às ferramentas que trabalho e também a descobrir e
+              aprender novas ferramentas.
+            </p>
+          </TextContainer>
+        </ContentContainer>
       </MainContent>
     </Container>
   );

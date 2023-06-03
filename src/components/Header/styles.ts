@@ -3,13 +3,19 @@ import styled from "styled-components";
 export const Container = styled.header`
   width: 100%;
 
+  position: fixed;
+
   padding: 2rem 0;
+
+  z-index: 99999;
 
   display: flex;
   align-items: center;
   justify-content: space-around;
 
   border: 2px #fff;
+
+  background: var(--background);
 
   p {
     font-size: 2rem;
@@ -19,7 +25,7 @@ export const Container = styled.header`
     user-select: none;
 
     span {
-      color: var(--pink-500);
+      color: var(--blue-500);
     }
   }
 `;
@@ -54,16 +60,16 @@ export const HeaderButton = styled.button`
     margin-right: 0.875rem;
   }
 
-  transition: background 0.2s;
+  transition: all 0.2s;
 
   :hover {
-    background: var(--red-500);
+    background: var(--blue-500);
     border-radius: 0.5rem;
   }
 `;
 
 export const ContactButton = styled.button`
-  background: var(--red-500);
+  background: var(--blue-500);
   border: none;
   border-radius: 0.5rem;
 
@@ -86,9 +92,9 @@ export const ContactButton = styled.button`
     margin-right: 0.875rem;
   }
 
-  transition: background 0.2s;
+  transition: all 0.2s;
 
   :hover {
-    background: var(--red-500-filter);
+    filter: brightness(0.8);
   }
 `;
