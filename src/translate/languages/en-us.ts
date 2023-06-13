@@ -17,6 +17,9 @@ const messages = {
             },
             about:{
                 title: ""
+            },
+            career:{
+                title: "Career"
             }
         }
     }
