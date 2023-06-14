@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const MainContainer = styled.div`
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
 export const Container = styled.section`
   padding: 4rem 0;
 
@@ -7,11 +15,9 @@ export const Container = styled.section`
   align-items: center;
   flex-direction: column;
 
-  text-align: center;
+  width: 80%;
 
-  width: 100%;
-
-  gap: 1.5rem;
+  gap: 3rem;
 
   h2 {
     color: var(--blue-500);
@@ -22,6 +28,13 @@ export const Container = styled.section`
 
     font-weight: bold;
     font-size: 3.5rem;
+
+    text-align: center;
+  }
+
+  button {
+    background: transparent;
+    border: none;
   }
 `;
 
@@ -35,6 +48,16 @@ export const ButtonsContainer = styled.section`
 
   gap: 0.75rem;
 
+  .backgroundButton {
+    transition: all 0.2s ease-in;
+    position: absolute;
+    height: 100%;
+
+    background: var(--blue-500);
+
+    border-radius: 2.5rem;
+  }
+
   button {
     display: flex;
     justify-content: center;
@@ -42,9 +65,7 @@ export const ButtonsContainer = styled.section`
     padding: 0.5rem 1.5rem;
 
     border: none;
-
     background: transparent;
-
     z-index: 1;
 
     width: fit-content;
@@ -54,7 +75,7 @@ export const ButtonsContainer = styled.section`
     font-size: 1rem;
     line-height: 140%;
 
-    &:focus-visible {
+    :focus-visible {
       box-shadow: 0 0 0.25rem 2px var(--blue-500);
       border-radius: 2.5rem;
     }
@@ -95,7 +116,7 @@ export const List = styled.ul`
 
     border-left: 2px solid var(--gray-500);
 
-    > button {
+    button {
       width: fit-content;
 
       padding: 0.5rem 1.5rem;
@@ -108,17 +129,17 @@ export const List = styled.ul`
 
       transition: all 0.2s ease-in;
 
-      &:focus-visible {
-        box-shadow: 0 0 0.25rem 2px var(--green-500);
+      :focus-visible {
+        box-shadow: 0 0 0.25rem 2px var(--blue-500);
       }
     }
   }
 
   .activeItem {
-    border-left: 2px solid var(--green-500);
+    border-left: 2px solid var(--blue-500);
 
-    > button:first-child {
-      color: var(--green-500);
+    button:first-child {
+      color: var(--blue-500);
     }
   }
 `;
@@ -140,11 +161,15 @@ export const DetailsContainer = styled.section`
       font-size: 1.125rem;
       line-height: 150%;
 
-      a {
-        color: var(--green-500);
+      color: #fff;
 
-        &:focus-visible {
-          box-shadow: 0 0 0.25rem 2px var(--green-500);
+      a {
+        color: var(--blue-500);
+
+        text-decoration: none;
+
+        :focus-visible {
+          box-shadow: 0 0 0.25rem 2px var(--blue-500);
         }
       }
     }
@@ -154,7 +179,7 @@ export const DetailsContainer = styled.section`
       font-size: 1rem;
       line-height: 150%;
 
-      color: var(--gray-500);
+      color: var(--blue-500);
     }
   }
 
@@ -162,9 +187,9 @@ export const DetailsContainer = styled.section`
     li {
       margin-left: 1rem;
       list-style: disc;
-      color: var(--green-500);
+      color: var(--blue-500);
 
-      + li {
+      li {
         margin-top: 0.75rem;
       }
 
@@ -181,15 +206,15 @@ export const DetailsContainer = styled.section`
 
 export const SubList = styled.ul`
   .subListItem {
-    width: calc(100% - 3rem);
+    width: calc(100% - rem);
     height: fit-content;
 
     list-style: circle;
-    margin: 0 3rem;
+    margin: 0 2rem;
 
     transition: all 0.2s ease-in;
 
-    > button {
+    button {
       display: flex;
       justify-content: flex-start;
 
@@ -205,17 +230,17 @@ export const SubList = styled.ul`
 
       transition: all 0.2s ease-in;
 
-      &:focus-visible {
-        box-shadow: 0 0 0.25rem 2px var(--green-500);
+      :focus-visible {
+        box-shadow: 0 0 0.25rem 2px var(--blue-500);
       }
     }
   }
 
-  & .activeSubItem {
-    color: var(--green-500);
+  .activeSubItem {
+    color: var(--blue-500);
 
-    > button:first-child {
-      color: var(--green-500);
+    button:first-child {
+      color: var(--blue-500);
     }
   }
 `;

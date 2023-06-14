@@ -18,6 +18,8 @@ export const GlobalStyle = createGlobalStyle`
         --white-text: #c4cfde;
 
         --black: #000;
+
+        --gray-500: #828282;
     }
     
     *  {

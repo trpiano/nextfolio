@@ -20,6 +20,23 @@ export type IDescription =
       };
     };
 
+export type CareerDescription =
+  | {
+      name: string;
+      organization: string;
+      startDate: Date;
+      isFinished: false;
+      activityDescription: string[];
+    }
+  | {
+        organization: string;
+        startDate: Date;
+        endDate: Date;
+        isFinished: true;
+        activityDescription: string[];
+      
+    };
+
 type ISubItems = {
   name: string;
   description: IDescription;
