@@ -22,7 +22,7 @@ export const Container = styled.section`
   h2 {
     color: var(--blue-500);
     letter-spacing: 0.5px;
-    line-height: 14px;
+    line-height: 100%;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
 

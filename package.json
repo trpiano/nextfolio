@@ -10,6 +10,7 @@
   "dependencies": {
     "@types/node": "^16.11.10",
     "@types/react": "^17.0.37",
+    "axios": "^1.4.0",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.12.16",
     "i18next": "^21.8.9",

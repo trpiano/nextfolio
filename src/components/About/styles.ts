@@ -29,14 +29,12 @@ export const HeaderContainer = styled.div`
   h2 {
     color: var(--blue-500);
     letter-spacing: 0.5px;
-    line-height: 14px;
+    line-height: 100%;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
 
     font-weight: bold;
     font-size: 3.5rem;
-
-    padding: 1rem 0 0 0;
   }
 `;
 
