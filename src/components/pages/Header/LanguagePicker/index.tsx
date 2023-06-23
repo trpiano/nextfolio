@@ -1,8 +1,10 @@
+"use client";
+
 import Image from "next/image";
 
 import { FlagLanguageSelector } from "./styles";
 
-import { i18next } from "../../../translate/i18n";
+import { i18next } from "../../../../translate/i18n";
 
 export function LangPicker() {
   const handleSelectLanguage = () => {
@@ -18,19 +20,18 @@ export function LangPicker() {
   };
 
   return (
-    <>
-      <FlagLanguageSelector>
-        <Image
-          onClick={handleSelectLanguage}
-          src={
-            i18next.t("navbar.language") === "english"
-              ? "/images/icons/united-states-icon.svg"
-              : "/images/icons/brazilian-icon.svg"
-          }
-          width={30}
-          height={30}
-        />
-      </FlagLanguageSelector>
-    </>
+    <FlagLanguageSelector>
+      <Image
+        onClick={handleSelectLanguage}
+        src={
+          i18next.t("navbar.language") === "english"
+            ? "/images/icons/united-states-icon.svg"
+            : "/images/icons/brazilian-icon.svg"
+        }
+        alt="Flag Icon"
+        width={30}
+        height={30}
+      />
+    </FlagLanguageSelector>
   );
 }

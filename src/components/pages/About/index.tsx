@@ -1,6 +1,6 @@
 import Lottie from "react-lottie";
 
-import animationComputer from "../../assets/animations/computer.json";
+import animationComputer from "../../../assets/animations/computer.json";
 
 import {
   Container,
@@ -10,6 +10,9 @@ import {
   TextContainer,
   AnimationContainer,
 } from "./styles";
+
+import { i18next } from "../../../translate/i18n";
+import { motion } from "framer-motion";
 
 export function About() {
   const defaultOptions = {
@@ -28,7 +31,17 @@ export function About() {
     <Container>
       <MainContent>
         <HeaderContainer>
-          <h2>About Me</h2>
+          <motion.h2
+            id="about"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 1 },
+            }}
+          >
+            {i18next.t("about.title")}
+          </motion.h2>
         </HeaderContainer>
         <ContentContainer>
           <AnimationContainer>
@@ -39,16 +52,7 @@ export function About() {
             />
           </AnimationContainer>
           <TextContainer>
-            <p>
-              Prazer, me chamo Timóteo, tenho 23 anos e sou natural de Paraguaçu
-              Paulista, mas atualmente moro em Presidente Prudente, interior de
-              São Paulo. Sou formado em Sistema de Informação de Universidade
-              Anhanguera, onde conclui o curso por uma bolsa integrar do PROUNI.
-              Atuo como desenvolvedor front-end, utilizando ReactJS, NextJS,
-              Styled-Components e outros libs. Sempre buscando me aprimorar em
-              relação às ferramentas que trabalho e também a descobrir e
-              aprender novas ferramentas.
-            </p>
+            <p>{i18next.t("about.content")}</p>
           </TextContainer>
         </ContentContainer>
       </MainContent>

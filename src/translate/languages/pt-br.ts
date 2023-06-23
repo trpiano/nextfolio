@@ -6,6 +6,7 @@ const messages = {
         about: "Sobre",
         skills: "Habilidades",
         projects: "Projetos",
+        career: "Carreira",
         blog: "Blog",
         contact: "Contatar",
         language: "portuguese",
@@ -16,7 +17,17 @@ const messages = {
         portfolioButton: "Meu Portfolio",
       },
       about: {
-        title: "",
+        title: 'Sobre mim',
+        content: "Prazer, me chamo Timóteo, tenho 23 anos e sou natural de Paraguaçu Paulista, mas atualmente moro em Presidente Prudente, interior de São Paulo. Sou formado em Sistema de Informação de Universidade Anhanguera, onde conclui o curso por uma bolsa integrar do PROUNI. Atuo como desenvolvedor front-end, utilizando ReactJS, NextJS, Styled-Components e outros libs. Sempre buscando me aprimorar em relação às ferramentas que trabalho e também a descobrir e aprender novas ferramentas.",
+      },
+      skills: {
+        title: 'Habilidades',
+        frontEnd: 'Front-end',
+        backEnd: 'Back-end',
+        hostingPlatforms: 'Plataformas de hospedagem',
+        languages: 'Linguagens de programação',
+        dataBases: 'Banco de dados',
+        versionControl: 'Controle de versão'
       },
       career: {
         title: "Carreira",
@@ -96,6 +107,25 @@ const messages = {
           },
         ],
       },
+      projects:{
+        title: 'Projetos',
+        viewMore: 'Ver Mais',
+        isInDevelopment: 'Em desenvolvimento!'
+      },
+      contact: {
+        title: 'Contato',
+        form: {
+          namePlaceholder: 'Nome',
+          nameRequiredMessage: 'Nome é obrigatório',
+          emailPlaceholder: 'E-mail',
+          emailRequiredMessage: 'E-mail é obrigatório',
+          subjectPlaceholder: 'Assunto',
+          subjectRequiredMessage: 'Assunto é obrigatório',
+          messagePlaceholder: 'Mensagem',
+          messageRequiredMessage: 'Mensagem é obrigatória',
+          sendButton: 'Enviar agora',
+        },
+      }
     },
   },
 };

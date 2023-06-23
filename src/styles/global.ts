@@ -7,7 +7,8 @@ export const GlobalStyle = createGlobalStyle`
         --pink-500: #D53F8C;
 
         --blue-500: #31bcbe;
-
+        --blue-700: #359293;
+        
         --red-450:#f9004d;
         --red-500: #E53E3E;
 
@@ -16,6 +17,8 @@ export const GlobalStyle = createGlobalStyle`
         --white: #fff;
 
         --white-text: #c4cfde;
+
+        --yellow-500: #dbb42c;
 
         --black: #000;
 
@@ -27,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
     }
+    
     // Font-size: 16px (Desktop)
     html{
         @media (max-width: 1080px) {

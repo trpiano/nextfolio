@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-import { i18next } from "../../translate/i18n";
+import { i18next } from "../../../translate/i18n";
 import { useEffect, useRef, useState } from "react";
 
 import {
@@ -15,7 +15,7 @@ import {
   SubList,
 } from "./styles";
 
-import { ICareer } from "../../constants/career";
+import { ICareer } from "../../../constants/career";
 
 export function Career() {
   const careerObject = Array.from(

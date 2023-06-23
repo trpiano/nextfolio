@@ -30,7 +30,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const MainContent = styled.div`
-  width: 90%;
+  width: 70%;
 
   display: flex;
   flex-direction: column;
@@ -41,27 +41,25 @@ export const MainContent = styled.div`
 `;
 
 export const ContentContainer = styled.section`
-  width: 100%;
-
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
 `
 
 export const Card = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 
   gap:1rem;
 
-  width: 90%;
-  max-width: 440px;
+  width: 100%;
+  height: 100%;
+
   color: #fff;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
 
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -71,7 +69,7 @@ export const Card = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.3);
 
   span{
-    font-size: 1.65rem;
+    font-size: 1.5rem;
     font-weight: 700;
     font-family: 'Roboto' ,sans-serif;
   }
@@ -87,11 +85,29 @@ export const Card = styled.div`
   }
 `
 
+export const CardContainer = styled.div`
+  width: 100%;
+
+  padding: 0 1rem;
+`
+
 export const CardContent = styled.a`
+  text-decoration: none;
+
+  padding: 0.5rem 0;
+
+  color: #fff;
+
   width: 100%;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: row;
+
+  gap: 0.5rem;
+
+  p{
+    font-size: 1rem;
+  }
 `

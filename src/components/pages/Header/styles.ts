@@ -17,10 +17,12 @@ export const Container = styled.header`
 
   background: var(--background);
 
-  p {
+  a {
     font-size: 2rem;
     font-weight: 700;
     color: var(--white);
+
+    text-decoration: none;
 
     user-select: none;
 

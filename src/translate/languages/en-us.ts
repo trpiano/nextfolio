@@ -16,55 +16,64 @@ const messages = {
                 portfolioButton: "My Portfolio",
             },
             about: {
-                title: ""
+                title: 'About me',
+                content: "Nice to meet you, my name is Timóteo, I'm 23 years old and I'm from Paraguaçu Paulista, but I currently live in Presidente Prudente, in the interior of São Paulo. I graduated in Information System from Anhanguera University, where I completed the course through a PROUNI scholarship. I work as a front-end developer, using ReactJS, NextJS, Styled-Components and other libs. Always looking to improve myself in relation to the tools I work with and also to discover and learn new tools."
+            },
+            skills: {
+                frontEnd: 'Front-end',
+                backEnd: 'Back-end',
+                hostingPlatforms: 'Hosting Platforms',
+                languages: 'Programming Languages',
+                dataBases: 'DataBase',
+                versionControl: 'Version Control'
             },
             career: {
-                title: "Carreira",
-                present: "Presente",
+                title: "Career",
+                present: "Present",
                 activities: [
                     {
-                        optionName: "Experiência",
+                        optionName: "Experience",
                         list: [
                             {
                                 name: "KOR Solutions",
                                 url: "https://kor.solutions/",
                                 subItems: [
                                     {
-                                        name: "Desenvolvedor Full-Stack",
+                                        name: "Full Stack Developer",
                                         description: {
-                                            name: "Desenvolvedor Full-Stack na ",
+                                            name: "Full-Stack Developer at ",
                                             organization: " KOR Solutions",
-                                            startDate: "Mai 2023",
+                                            startDate: "May 2023",
                                             endDate: "Jun 2023",
                                             isFinished: true,
                                             activityDescription: [
-                                                "Desenvolvimento de back-end com NodeJs;",
-                                                "Lambda e ecossistema AWS;",
-                                                "Implementação de infra-estrutura utilizando TerraForm.",
-                                                "Desenvolvimento de novas features para o sistema usando ReactJS e NextJS;",
-                                                "Integração com APIs Rest;",
-                                                "Aprimoramento do sistema legado;",
-                                                "Correção de bugs e melhorias de arquitetura;",
-                                                "Metodologia SCRUM para desenvolvimento das atividades;",
-                                                "Deploy utilizando Vercel e AWS Amplify",
+                                                "Back-end development with NodeJs;",
+                                                "Lambda and AWS ecosystem;",
+                                                "Infrastructure implementation using TerraForm;",
+                                                "Development of new features for the system using ReactJS and NextJS;",
+                                                "Integration with Rest APIs;",
+                                                "Improvement of the legacy system;",
+                                                "Bug fixes and architecture improvements;",
+                                                "SCRUM methodology for the development of activities;",
+                                                "Deploy using Vercel and AWS Amplify.",
                                             ],
                                         },
                                     },
                                     {
-                                        name: "Desenvolvedor Front-end",
+                                        name: "Front End Developer",
                                         description: {
-                                            name: "Desenvolvedor Front-end na",
+                                            name: "Front End Developer at",
                                             organization: " KOR Solutions",
-                                            startDate: "Abr 2022",
-                                            endDate: "Mai 2023",
+                                            startDate: "Apr 2022",
+                                            endDate: "May 2023",
                                             isFinished: true,
                                             activityDescription: [
-                                                "Desenvolvimento de novas features para o sistema usando ReactJS e NextJS;",
-                                                "Integração com APIs Rest;",
-                                                "Aprimoramento do sistema legado;",
-                                                "Correção de bugs e melhorias de arquitetura;",
-                                                "Metodologia SCRUM para desenvolvimento das atividades;",
-                                                "Deploy utilizando Vercel e AWS Amplify",
+                                                "Development of new features for the system using ReactJS and NextJS;",
+                                                "Integration with Rest APIs;",
+                                                "Improvement of the legacy system;",
+                                                "Bug fixes and architecture improvements;",
+                                                "SCRUM methodology for the development of activities;",
+                                                "Deploy using Vercel and AWS Amplify.",
                                             ],
                                         },
                                     },
@@ -74,14 +83,14 @@ const messages = {
                     },
 
                     {
-                        optionName: "Formação",
+                        optionName: "Education",
                         list: [
                             {
-                                name: "Bacharelado em Sistemas de Informação",
+                                name: "Bachelor of Information Systems",
                                 url: "https://www.anhanguera.com/",
                                 description: {
-                                    name: "Bacharelado em Sistemas de Informação na ",
-                                    organization: "Anhanguera UniABC - Santo Andre",
+                                    name: "Bachelor of Information Systems at ",
+                                    organization: "Anhanguera UniABC - Santo André",
                                     startDate: "Jul 2018",
                                     endDate: "Jul 2022",
                                     isFinished: true,
@@ -96,6 +105,10 @@ const messages = {
                     },
                 ],
             },
+            projects: {
+                title: 'Projetos',
+                viewMore: 'Ver Mais'
+            }
         }
     }
 }

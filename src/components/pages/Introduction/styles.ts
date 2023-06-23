@@ -9,11 +9,6 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  img {
-    width: 450px;
-    height: 600px;
-  }
 `;
 
 export const BoxContainer = styled.div`
