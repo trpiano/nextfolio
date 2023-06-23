@@ -28,11 +28,10 @@ export function About() {
   const animationHeight = "100%";
 
   return (
-    <Container>
+    <Container id="about">
       <MainContent>
         <HeaderContainer>
           <motion.h2
-            id="about"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

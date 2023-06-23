@@ -22,12 +22,20 @@ export function Introduction() {
         <p>{i18next.t("home.description")}</p>
 
         <ButtonsContainer>
-          <PortfolioButton onClick={() => {}}>
-            {i18next.t("home.portfolioButton")}
+          <PortfolioButton
+            onClick={() => {
+              window.open(i18next.t("home.curriculumLink"), "_blank");
+            }}
+          >
+            {i18next.t("home.curriculumButton")}
           </PortfolioButton>
-          <VideoButton>
-            <FaPlay />
-          </VideoButton>
+          {i18next.t("home.presentationVideo") ? (
+            <VideoButton>
+              <FaPlay />
+            </VideoButton>
+          ) : (
+            <></>
+          )}
         </ButtonsContainer>
       </BoxContainer>
 

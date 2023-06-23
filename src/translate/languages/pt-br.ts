@@ -14,7 +14,9 @@ const messages = {
       home: {
         title: "Oi, sou Timóteo Piano",
         description: "Desenvolvedor Front-End | Full-Stack 👨‍💻👋",
-        portfolioButton: "Meu Portfolio",
+        curriculumButton: "Meu Currículo",
+        curriculumLink: `${process.env.NEXT_PUBLIC_CURRICULUM_PT_URL}`,
+        presentationVideo: `${process.env.NEXT_PUBLIC_PRESENTATION_VIDEO_PT_URL}`
       },
       about: {
         title: 'Sobre mim',
@@ -107,7 +109,7 @@ const messages = {
           },
         ],
       },
-      projects:{
+      projects: {
         title: 'Projetos',
         viewMore: 'Ver Mais',
         isInDevelopment: 'Em desenvolvimento!'
@@ -123,6 +125,7 @@ const messages = {
           subjectRequiredMessage: 'Assunto é obrigatório',
           messagePlaceholder: 'Mensagem',
           messageRequiredMessage: 'Mensagem é obrigatória',
+          companyPlaceholder: 'Empresa',
           sendButton: 'Enviar agora',
         },
       }

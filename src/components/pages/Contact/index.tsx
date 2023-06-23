@@ -16,31 +16,43 @@ export function Contact() {
     handleSubmit,
     register,
     formState: { errors },
+    reset,
   } = useForm();
 
   const onSubmit: SubmitHandler<any> = (data) => {
+    console.log(data);
+
     toast.info("Enviando mensagem...");
 
+    //Envio contatante
     emailjs
       .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "",
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "",
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_CLIENT ?? "",
         data,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
         toast.success("Mensagem enviada com sucesso!");
+        reset();
       })
       .catch(() => {
         toast.error("Ocorreu um erro ao enviar a mensagem");
       });
+
+    //Envio contatado
+    emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? "",
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_ADMIN ?? "",
+      data,
+      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    );
   };
 
   return (
-    <Container>
+    <Container id="contactMe">
       <ContentContainer>
         <motion.h2
-          id="contactMe"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -54,7 +66,7 @@ export function Contact() {
         <Form onSubmit={handleSubmit(onSubmit)}>
           <section className="row">
             <Input
-              name="userName"
+              name="name"
               register={register}
               placeholder={i18next.t("contact.form.namePlaceholder")}
               requiredMessage={i18next.t("contact.form.nameRequiredMessage")}
@@ -70,7 +82,7 @@ export function Contact() {
             />
 
             <Input
-              name="userEmail"
+              name="email"
               register={register}
               placeholder={i18next.t("contact.form.emailPlaceholder")}
               requiredMessage={i18next.t("contact.form.emailRequiredMessage")}
@@ -102,6 +114,20 @@ export function Contact() {
             }}
           />
 
+          <Input
+            name="company"
+            register={register}
+            placeholder={i18next.t("contact.form.companyPlaceholder")}
+            errors={errors}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            variants={{
+              hidden: { opacity: 1 },
+            }}
+          />
+
           <Textarea
             name="message"
             register={register}
@@ -118,7 +144,7 @@ export function Contact() {
             }}
           />
 
-          <Button type="submit" color="green">
+          <Button type="submit" color="blue">
             {i18next.t("contact.form.sendButton")}
           </Button>
         </Form>

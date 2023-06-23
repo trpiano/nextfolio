@@ -8,29 +8,35 @@ import {
   } from "react-icons/ri";
 
 interface MenuItemsType {
+    href: string, 
     name: string;
-    icon?: React.ReactNode | null;
+    icon: React.ReactNode;
 }
 
 export const menuItems: MenuItemsType[] = [
-    {
+    {   
+        href: 'introduction',
         name: 'home',
         icon: <RiHome2Fill />,
     },
     {
+        href: 'about', 
         name: 'about',
         icon: <RiUser2Fill />,
     },
     {
+        href: 'skills',
         name: 'skills',
         icon: <RiBookmark3Fill />,
     },
     {
-        name: 'projects',
-        icon: <RiCodeBoxFill />,
-    },
-    {
+        href: 'career',
         name: 'career',
         icon: <RiBriefcase4Line />,
+    },
+    {   
+        href: 'projects',
+        name: 'projects',
+        icon: <RiCodeBoxFill />,
     },
 ]

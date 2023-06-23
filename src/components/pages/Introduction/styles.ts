@@ -47,14 +47,14 @@ export const PortfolioButton = styled.button`
   border-radius: 1.5rem;
   border: 1px solid var(--blue-500);
 
-  color: var(--blue-500);
-
   font-size: 1rem;
   font-weight: 700;
 
   padding: 1rem;
 
   transition: all 0.2s;
+
+  color: var(--blue-500);
 
   :hover {
     background: var(--blue-500);

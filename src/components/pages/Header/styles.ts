@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
+  max-height: 100px;
   width: 100%;
 
   position: fixed;
 
   padding: 2rem 0;
 
-  z-index: 99999;
+  z-index: 2;
 
   display: flex;
   align-items: center;
@@ -17,7 +18,7 @@ export const Container = styled.header`
 
   background: var(--background);
 
-  a {
+  p {
     font-size: 2rem;
     font-weight: 700;
     color: var(--white);
@@ -38,10 +39,12 @@ export const ButtonContainer = styled.div`
   justify-content: space-around;
 `;
 
-export const HeaderButton = styled.button`
+export const HeaderButton = styled.a`
   background: transparent;
   border: none;
   border-radius: 0.5rem;
+
+  text-decoration: none;
 
   padding: 0 0.5rem;
   margin: 0 0.5rem;
@@ -50,13 +53,20 @@ export const HeaderButton = styled.button`
 
   user-select: none;
 
-  display: flex;
-  align-items: center;
-
   font-size: 1.075rem;
   font-weight: 700;
 
   height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  svg, span{
+    color: var(--blue-500);
+  }
 
   svg {
     margin-right: 0.875rem;
@@ -67,10 +77,14 @@ export const HeaderButton = styled.button`
   :hover {
     background: var(--blue-500);
     border-radius: 0.5rem;
+
+    svg, span{
+      color: var(--white);
+    }
   }
 `;
 
-export const ContactButton = styled.button`
+export const ContactButton = styled.a`
   background: var(--blue-500);
   border: none;
   border-radius: 0.5rem;
@@ -89,6 +103,16 @@ export const ContactButton = styled.button`
   font-weight: 700;
 
   height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  svg, span{
+    color: var(--white);
+  }
 
   svg {
     margin-right: 0.875rem;

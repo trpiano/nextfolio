@@ -1,5 +1,4 @@
 import { Introduction } from "../components/pages/Introduction";
-import { Header } from "../components/pages/Header";
 import { About } from "../components/pages/About";
 import { Skills } from "../components/pages/Skills";
 import { Career } from "../components/pages/Career";
@@ -14,7 +13,6 @@ export default function App() {
         <title>Timóteo | Personal Portfolio</title>
       </Head>
 
-      <Header />
       <Introduction />
       <About />
       <Skills />

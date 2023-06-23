@@ -55,3 +55,14 @@ export const ContentContainer = styled.section`
     }
   }
 `
+
+export const SeeMoreContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  button{
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+`

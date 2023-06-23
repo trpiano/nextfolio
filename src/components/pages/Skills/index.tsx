@@ -55,7 +55,7 @@ export function Skills() {
     <Container>
       <MainContent>
         <HeaderContainer>
-          <h2>{i18next.t('skills.title')}</h2>
+          <h2 id="skills">{i18next.t('skills.title')}</h2>
         </HeaderContainer>
 
         <ContentContainer>
@@ -66,7 +66,7 @@ export function Skills() {
               {frontEndSkillsData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
                     <p>{item.skillName}</p>
                   </CardContent>
                 );
@@ -80,7 +80,7 @@ export function Skills() {
               {hostingPlatformsSkillsData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
                     <p>{item.skillName}</p>
                   </CardContent>
                 );
@@ -94,7 +94,7 @@ export function Skills() {
               {languages.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
                     <p>{item.skillName}</p>
                   </CardContent>
                 );
@@ -108,7 +108,7 @@ export function Skills() {
               {databases.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
                     <p>{item.skillName}</p>
                   </CardContent>
                 );
@@ -122,7 +122,7 @@ export function Skills() {
               {backEndSkillsData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
                     <p>{item.skillName}</p>
                   </CardContent>
                 );
@@ -136,7 +136,7 @@ export function Skills() {
               {versionData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
                     <p>{item.skillName}</p>
                   </CardContent>
                 );
@@ -150,7 +150,7 @@ export function Skills() {
               {IaCData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
                     <p>{item.skillName}</p>
                   </CardContent>
                 );
@@ -164,7 +164,7 @@ export function Skills() {
               {cloudPlatformsData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
                     <p>{item.skillName}</p>
                   </CardContent>
                 );

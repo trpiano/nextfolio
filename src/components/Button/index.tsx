@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 type ButtonProps = ComponentProps<typeof motion.button> & {
   children: React.ReactNode;
-  color: 'green' | 'white';
+  color: 'blue' | 'white';
 };
 
 export const Button = ({ children, color, ...rest }: ButtonProps) => {
@@ -13,7 +13,7 @@ export const Button = ({ children, color, ...rest }: ButtonProps) => {
     <motion.button
       className={Container}
       style={
-        color === 'green'
+        color === 'blue'
           ? {
               background: 'var(--blue-500)',
               border: '1px solid var(--blue-500)',
