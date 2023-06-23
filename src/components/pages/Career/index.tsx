@@ -80,7 +80,7 @@ export function Career() {
       careerObject[currentTab].list[0].subItems?.[0].description ??
       careerObject[currentTab].list[0].description
     );
-  }, [currentTab, setSelectedListItem]);
+  }, [currentTab, setSelectedListItem, careerObject]);
 
   return (
     <MainContainer>
@@ -103,6 +103,7 @@ export function Career() {
           {careerObject.map((item, index) => {
             return (
               <motion.button
+                className="buttonItem"
                 key={item.optionName}
                 id={item.optionName}
                 onClick={() => {
