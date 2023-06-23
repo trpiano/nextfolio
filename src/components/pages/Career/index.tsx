@@ -80,7 +80,7 @@ export function Career() {
       careerObject[currentTab].list[0].subItems?.[0].description ??
       careerObject[currentTab].list[0].description
     );
-  }, [currentTab, setSelectedListItem, careerObject]);
+  }, [currentTab, setSelectedListItem]);
 
   return (
     <MainContainer>
