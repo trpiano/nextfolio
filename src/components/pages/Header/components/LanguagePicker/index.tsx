@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import { FlagLanguageSelector } from "./styles";
 
-import { i18next } from "../../../../translate/i18n";
+import { i18next } from "../../../../../translate/i18n";
 
 export function LangPicker() {
   const handleSelectLanguage = () => {

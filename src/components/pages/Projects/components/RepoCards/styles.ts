@@ -23,6 +23,16 @@ export const Container = styled.div`
         object-fit: cover;
         border-radius: 0.5rem;
     }
+
+    @media screen and (max-width: 800px) {
+      flex-direction: column;
+      height: 10.25rem;
+
+      .repoImage {
+        width: 100%;
+        height: 10.25rem;
+      }
+    }
   }
 
   .textGroup {
@@ -30,6 +40,11 @@ export const Container = styled.div`
     align-items: center;
 
     gap: 0.5rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 80%;
+    border-radius: 0.5rem;
   }
 `
 
@@ -45,7 +60,7 @@ export const RepoData = styled.section`
   height: fit-content;
 
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
+  border-radius: 0.5rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
@@ -67,6 +82,13 @@ export const RepoData = styled.section`
   svg {
     height: 1.5rem;
     width: 1.5rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    height: 10.25rem;
+
+    background-color: var(--gray-200-80);
   }
 `;
 
@@ -103,6 +125,13 @@ export const Title = styled.div<TitleProps>`
 
     svg {
       color: var(--blue-500);
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    svg{
+      color: var(--white)
     }
   }
 `;
@@ -149,6 +178,12 @@ export const Footer = styled.div`
 
     svg {
       color: var(--blue-500);
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    svg{
+      color: var(--white)
     }
   }
 `

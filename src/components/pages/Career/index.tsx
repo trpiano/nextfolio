@@ -39,7 +39,7 @@ export function Career() {
 
   useEffect(() => {
     if (buttonsContainerRef) {
-      let leftArray: string[] = ["0rem"];
+      let leftArray: string[] = ['0rem'];
       let widthArray: string[] = [];
 
       careerObject.forEach((item) => {
@@ -54,7 +54,7 @@ export function Career() {
 
           widthArray.forEach((item, i) => {
             if (widthArray.length !== i + 1) {
-              left = left + Number(item.replace("rem", "")) + 0.75;
+              left = left + Number(item.replace('rem', '')) + 0.75;
             }
           });
 
@@ -72,6 +72,15 @@ export function Career() {
       );
     }
   }, [buttonsContainerRef]);
+
+  useEffect(() => {
+    setSelectedListItem(0);
+    setSelectedListSubItem(0);
+    setDescriptionData(
+      careerObject[currentTab].list[0].subItems?.[0].description ??
+      careerObject[currentTab].list[0].description
+    );
+  }, [currentTab, setSelectedListItem]);
 
   return (
     <MainContainer>

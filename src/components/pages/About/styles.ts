@@ -8,6 +8,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  padding: 5rem 0 0 0;
 `;
 
 export const MainContent = styled.div`
@@ -60,6 +62,18 @@ export const ContentContainer = styled.div`
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+
+    gap: 0.5rem;
+  }
+
+  @media screen and (max-width: 400px) {
+    padding: 0 1.5rem;
+
+    gap: 0rem;
+  }
 `;
 
 export const TextContainer = styled.div`
@@ -73,4 +87,10 @@ export const TextContainer = styled.div`
   padding: 4rem 0;
 
   font-family: 'Roboto', sans-serif;
+
+  @media screen and (max-width: 950px) {
+    width: 100%;
+
+    padding: 1rem 0 4rem 0;
+  }
 `

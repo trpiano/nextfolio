@@ -3,13 +3,31 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 1120px;
   width: 100%;
-  height: calc(100vh);
+  /* height: calc(100vh); */
   margin: 0 auto;
-  padding: 5rem 2rem 0 2rem;
+  padding: 10rem 2rem 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width: 950px) {
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 4rem;
+
+    padding: 15rem 3rem 5rem 3rem;
+  }
 `;
+
+export const HeroContainer = styled.div`
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+`
 
 export const BoxContainer = styled.div`
   h1 {
