@@ -10,6 +10,7 @@ import {
   ButtonsContainer,
   PortfolioButton,
   VideoButton,
+  HeroContainer,
 } from "./styles";
 
 export function Introduction() {
@@ -39,12 +40,15 @@ export function Introduction() {
         </ButtonsContainer>
       </BoxContainer>
 
-      <Image
-        src="/images/profile.png"
-        alt="Profile Image"
-        width={450}
-        height={600}
-      />
+      <HeroContainer>
+        <Image
+          src="/images/profile.png"
+          alt="Profile Image"
+          width={450}
+          height={600}
+          className="hero"
+        />
+      </HeroContainer>
     </Container>
   );
 }

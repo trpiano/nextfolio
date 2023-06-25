@@ -36,9 +36,22 @@ export const Container = styled.section`
     background: transparent;
     border: none;
   }
+
+  @media screen and (max-width: 768px) {
+    .list {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .details {
+      width: 100%;
+    }
+  }
 `;
 
 export const ButtonsContainer = styled.section`
+  width: 100%;
+
   display: flex;
   position: relative;
   justify-content: center;
@@ -49,7 +62,7 @@ export const ButtonsContainer = styled.section`
   gap: 0.75rem;
 
   .backgroundButton {
-    transition: all 0.2s ease-in;
+    transition: all 0.4s ease-in;
     position: absolute;
     height: 100%;
 
@@ -66,6 +79,7 @@ export const ButtonsContainer = styled.section`
 
     border: none;
     background: transparent;
+
     z-index: 1;
 
     width: fit-content;
@@ -92,15 +106,6 @@ export const ExperiencesContainer = styled.section`
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-
-    .list {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .details {
-      width: 100%;
-    }
   }
 `;
 
@@ -140,6 +145,15 @@ export const List = styled.ul`
 
     button:first-child {
       color: var(--blue-500);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 100%;
+
+    .details {
+      width: 100%;
     }
   }
 `;

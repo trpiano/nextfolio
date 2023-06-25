@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  max-height: 100px;
+  max-height: 80px;
   width: 100%;
 
   position: fixed;
@@ -31,12 +31,40 @@ export const Container = styled.header`
       color: var(--blue-500);
     }
   }
+
+  .menuButton {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+
+    padding: 2rem;
+
+    .menuButton {
+      display: flex;
+
+      height: 2rem;
+
+      border: none;
+      background: transparent;
+
+      color: var(--blue-500);
+    }
+  }
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+
+
+  @media screen and (max-width: 768px) {
+    display: none;
+
+    justify-content: space-between;
+  }
 `;
 
 export const HeaderButton = styled.a`
@@ -62,14 +90,12 @@ export const HeaderButton = styled.a`
   align-items: center;
   justify-content: center;
 
+  gap: 0.875rem;
+
   text-decoration: none;
 
   svg, span{
     color: var(--blue-500);
-  }
-
-  svg {
-    margin-right: 0.875rem;
   }
 
   transition: all 0.2s;
@@ -81,6 +107,10 @@ export const HeaderButton = styled.a`
     svg, span{
       color: var(--white);
     }
+  }
+
+  @media screen and (max-width: 950px) {
+    gap: 0.5rem;
   }
 `;
 
@@ -108,19 +138,21 @@ export const ContactButton = styled.a`
   align-items: center;
   justify-content: center;
 
+  gap: 0.875rem;
+
   text-decoration: none;
 
   svg, span{
     color: var(--white);
   }
 
-  svg {
-    margin-right: 0.875rem;
-  }
-
   transition: all 0.2s;
 
   :hover {
     filter: brightness(0.8);
+  }
+
+  @media screen and (max-width: 950px) {
+    gap: 0.5rem;
   }
 `;
