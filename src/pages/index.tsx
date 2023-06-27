@@ -18,7 +18,7 @@ export default function App() {
   return (
     <>
       <Head>
-        <title>Timóteo | Personal Portfolio</title>
+        <title>Timóteo Piano | Personal Portfolio</title>
       </Head>
 
       <Container style={menuIsOpen ? { filter: "blur(0.5rem)" } : {}}>
