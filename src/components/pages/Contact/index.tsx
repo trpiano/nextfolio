@@ -20,8 +20,6 @@ export function Contact() {
   } = useForm();
 
   const onSubmit: SubmitHandler<any> = (data) => {
-    console.log(data);
-
     toast.info("Enviando mensagem...");
 
     //Envio contatante

@@ -66,11 +66,13 @@ export const ContentContainer = styled.div`
   @media screen and (max-width: 950px) {
     flex-direction: column;
 
+    padding: 0 4rem;
+
     gap: 0.5rem;
   }
 
-  @media screen and (max-width: 400px) {
-    padding: 0 1.5rem;
+  @media screen and (max-width: 500px) {
+    padding: 0 2rem;
 
     gap: 0rem;
   }
@@ -89,6 +91,12 @@ export const TextContainer = styled.div`
   font-family: 'Roboto', sans-serif;
 
   @media screen and (max-width: 950px) {
+    width: 100%;
+
+    padding: 1rem 0 4rem 0;
+  }
+
+  @media screen and (max-width: 500px) {
     width: 100%;
 
     padding: 1rem 0 4rem 0;

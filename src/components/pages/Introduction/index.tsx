@@ -6,6 +6,7 @@ import { IconsRow } from "./components/IconsRow";
 
 import {
   Container,
+  ContentContainer,
   BoxContainer,
   ButtonsContainer,
   PortfolioButton,
@@ -16,39 +17,41 @@ import {
 export function Introduction() {
   return (
     <Container id="introduction">
-      <BoxContainer>
-        <IconsRow />
+      <ContentContainer>
+        <BoxContainer>
+          <IconsRow />
 
-        <h1>{i18next.t("home.title")}</h1>
-        <p>{i18next.t("home.description")}</p>
+          <h1>{i18next.t("home.title")}</h1>
+          <p>{i18next.t("home.description")}</p>
 
-        <ButtonsContainer>
-          <PortfolioButton
-            onClick={() => {
-              window.open(i18next.t("home.curriculumLink"), "_blank");
-            }}
-          >
-            {i18next.t("home.curriculumButton")}
-          </PortfolioButton>
-          {i18next.t("home.presentationVideo") ? (
-            <VideoButton>
-              <FaPlay />
-            </VideoButton>
-          ) : (
-            <></>
-          )}
-        </ButtonsContainer>
-      </BoxContainer>
+          <ButtonsContainer>
+            <PortfolioButton
+              onClick={() => {
+                window.open(i18next.t("home.curriculumLink"), "_blank");
+              }}
+            >
+              {i18next.t("home.curriculumButton")}
+            </PortfolioButton>
+            {i18next.t("home.presentationVideo") ? (
+              <VideoButton>
+                <FaPlay />
+              </VideoButton>
+            ) : (
+              <></>
+            )}
+          </ButtonsContainer>
+        </BoxContainer>
 
-      <HeroContainer>
-        <Image
-          src="/images/profile.png"
-          alt="Profile Image"
-          width={450}
-          height={600}
-          className="hero"
-        />
-      </HeroContainer>
+        <HeroContainer>
+          <Image
+            src="/images/profile.png"
+            alt="Profile Image"
+            width={450}
+            height={600}
+            className="hero"
+          />
+        </HeroContainer>
+      </ContentContainer>
     </Container>
   );
 }

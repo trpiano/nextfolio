@@ -62,7 +62,11 @@ export const SeeMoreContainer = styled.div`
   justify-content: center;
 
   button{
-    padding: 0.5rem 1rem;
+    color: var(--white);
+
+    font-size: 1rem;
+
+    padding: 0.75rem 1rem;
     border-radius: 0.5rem;
   }
 `

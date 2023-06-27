@@ -107,7 +107,7 @@ export const CardContent = styled.a`
 
   color: #fff;
 
-  width: 100%;
+  width: fit-content;
 
   display: flex;
   align-items: center;
