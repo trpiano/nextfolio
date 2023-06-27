@@ -32,13 +32,13 @@ export function Introduction() {
             >
               {i18next.t("home.curriculumButton")}
             </PortfolioButton>
-            {i18next.t("home.presentationVideo") ? (
+            {/* {i18next.t("home.presentationVideo") ? (
               <VideoButton>
                 <FaPlay />
               </VideoButton>
             ) : (
               <></>
-            )}
+            )} */}
           </ButtonsContainer>
         </BoxContainer>
 
