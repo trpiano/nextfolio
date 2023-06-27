@@ -61,6 +61,10 @@ export const ButtonsContainer = styled.section`
 
   gap: 0.75rem;
 
+  .buttonItem{
+    color: var(--white)
+  }
+
   .backgroundButton {
     transition: all 0.4s ease-in;
     position: absolute;
@@ -107,11 +111,17 @@ export const ExperiencesContainer = styled.section`
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
+
+  @media screen and (max-width: 400px) {
+    width: fit-content;
+  }
 `;
 
 export const List = styled.ul`
   width: 40%;
   max-width: 350px;
+
+  list-style: var(--white); 
 
   .listItem {
     width: 100%;
@@ -120,11 +130,14 @@ export const List = styled.ul`
     list-style: none;
 
     border-left: 2px solid var(--gray-500);
+    color: var(--white);
 
     button {
       width: fit-content;
 
       padding: 0.5rem 1.5rem;
+
+      color: var(--white);
 
       font-weight: 500;
       font-size: 1rem;
@@ -143,7 +156,7 @@ export const List = styled.ul`
   .activeItem {
     border-left: 2px solid var(--blue-500);
 
-    button:first-child {
+    > button:first-child {
       color: var(--blue-500);
     }
   }
@@ -215,6 +228,10 @@ export const DetailsContainer = styled.section`
         color: var(--white);
       }
     }
+  }
+
+  @media screen and (max-width: 600px) {
+    width: fit-content;
   }
 `;
 

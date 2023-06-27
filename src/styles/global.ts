@@ -45,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
     body, input, textarea, button {
         font-family: 'DM Sans' ,sans-serif;
         font-weight: 400;
+        outline: none;
     }
     h1, h2 ,h3, h4, h5, h6, strong {
         font-weight: 600;
@@ -55,6 +56,15 @@ export const GlobalStyle = createGlobalStyle`
     }
     button {
         cursor: pointer;
+    }
+
+    input, textarea {
+        :-webkit-autofill {
+        -webkit-text-fill-color: white; /* Cor do texto */
+        -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0.2) inset !important;
+        background-color: rgba(255, 255, 255, 0.2) !important;
+    }
+
     }
     [disabled] {
         opacity: 0.6;

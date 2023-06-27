@@ -36,7 +36,7 @@ export const Container = styled.header`
     display: none;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 950px) {
     justify-content: space-between;
 
     padding: 2rem;
@@ -60,7 +60,7 @@ export const ButtonContainer = styled.div`
   justify-content: space-around;
 
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 950px) {
     display: none;
 
     justify-content: space-between;

@@ -8,10 +8,6 @@ export const Container = styled.div`
 
   gap: 0.5rem;
 
-  input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0.2) inset !important;
-  }
-
   input {
     display: flex;
     padding: 0.75rem 1rem;

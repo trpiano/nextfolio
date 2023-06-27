@@ -15,8 +15,8 @@ const messages = {
         title: "Oi, sou Timóteo Piano",
         description: "Desenvolvedor Front-End | Full-Stack 👨‍💻👋",
         curriculumButton: "Meu Currículo",
-        curriculumLink: `${process.env.NEXT_PUBLIC_CURRICULUM_PT_URL}`,
-        presentationVideo: `${process.env.NEXT_PUBLIC_PRESENTATION_VIDEO_PT_URL}`
+        curriculumLink: process.env.NEXT_PUBLIC_CURRICULUM_PT_URL,
+        presentationVideo: process.env.NEXT_PUBLIC_PRESENTATION_VIDEO_PT_URL
       },
       about: {
         title: 'Sobre mim',
