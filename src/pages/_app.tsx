@@ -13,7 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GoogleAnalytics GA_TRACKING_ID={process.env.GA_TRACKING_ID ?? ''} />
+      <GoogleAnalytics GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID ?? ''} />
         <GlobalStyle />
         <TranslateContextProvider>
           <AppContextProvider>
