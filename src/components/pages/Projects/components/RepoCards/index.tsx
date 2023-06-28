@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
 
@@ -66,14 +65,13 @@ export const RepoCards = () => {
                 hidden: { opacity: 1, x: 0 },
               }}
             >
-              <Image
+              <img
                 className="repoImage"
                 src={`https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${repo.name}/main/.github/img_1.png`}
                 width={600}
                 height={300}
                 alt={repo.name}
                 style={index % 2 === 0 ? { left: 0 } : { right: 0 }}
-                quality={100}
               />
 
               <RepoData style={index % 2 === 0 ? { right: 0 } : { left: 0 }}>
