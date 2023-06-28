@@ -15,7 +15,7 @@ import {
   SubList,
 } from "./styles";
 
-import { ICareer } from "../../../constants/career";
+import { ICareer, IDescription } from "../../../constants/career";
 
 export function Career() {
   const careerObject = Array.from(
@@ -29,9 +29,11 @@ export function Career() {
   const [currentTab, setCurrentTab] = useState(0);
   const [selectedListItem, setSelectedListItem] = useState(0);
   const [selectedListSubItem, setSelectedListSubItem] = useState(0);
-  const [descriptionData, setDescriptionData] = useState<any | undefined>(
-    careerObject[0].list[0].subItems?.[0].description ??
-      careerObject[0].list[0].description
+  const [descriptionData, setDescriptionData] = useState<
+    IDescription | undefined
+  >(
+    careerObject[0].list?.[0].subItems?.[0].description ??
+      careerObject[0].list?.[0].description
   );
   const [buttonStyles, setButtonStyles] = useState<
     { width: string; left: string }[]
@@ -39,7 +41,7 @@ export function Career() {
 
   useEffect(() => {
     if (buttonsContainerRef) {
-      let leftArray: string[] = ['0rem'];
+      let leftArray: string[] = ["0rem"];
       let widthArray: string[] = [];
 
       careerObject.forEach((item) => {
@@ -54,7 +56,7 @@ export function Career() {
 
           widthArray.forEach((item, i) => {
             if (widthArray.length !== i + 1) {
-              left = left + Number(item.replace('rem', '')) + 0.75;
+              left = left + Number(item.replace("rem", "")) + 0.75;
             }
           });
 
@@ -77,8 +79,8 @@ export function Career() {
     setSelectedListItem(0);
     setSelectedListSubItem(0);
     setDescriptionData(
-      careerObject[currentTab].list[0].subItems?.[0].description ??
-      careerObject[currentTab].list[0].description
+      careerObject[currentTab].list?.[0].subItems?.[0].description ??
+        careerObject[currentTab].list?.[0].description
     );
   }, [currentTab, setSelectedListItem]);
 
@@ -108,8 +110,8 @@ export function Career() {
                 id={item.optionName}
                 onClick={() => {
                   setCurrentTab(index),
-                  setSelectedListSubItem(0),
-                  setSelectedListItem(0)
+                    setSelectedListSubItem(0),
+                    setSelectedListItem(0);
                 }}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -127,7 +129,7 @@ export function Career() {
 
         <ExperiencesContainer>
           <List>
-            {careerObject[currentTab].list.map((item, index) => {
+            {careerObject[currentTab].list?.map((item, index) => {
               return (
                 <motion.li
                   key={item.name}

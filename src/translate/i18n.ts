@@ -4,10 +4,10 @@ import LanguageDetectors from 'i18next-browser-languagedetector'
 import { messages } from '.'
 
 i18next
-    .use(LanguageDetectors)
+    // .use(LanguageDetectors)
     .init({
         debug: false,
-        fallbackLng: 'ptBr',
+        fallbackLng: 'pt',
         resources: messages
     })
 
