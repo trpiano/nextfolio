@@ -1,5 +1,5 @@
 const messages = {
-  ptBr: {
+  pt: {
     translation: {
       navbar: {
         home: "Inicio",
@@ -53,13 +53,13 @@ const messages = {
                       activityDescription: [
                         "Desenvolvimento de back-end com NodeJs;",
                         "Lambda e ecossistema AWS;",
-                        "Implementação de infra-estrutura utilizando TerraForm.",
+                        "Implementação de infra-estrutura utilizando TerraForm;",
                         "Desenvolvimento de novas features para o sistema usando ReactJS e NextJS;",
                         "Integração com APIs Rest;",
                         "Aprimoramento do sistema legado;",
                         "Correção de bugs e melhorias de arquitetura;",
                         "Metodologia SCRUM para desenvolvimento das atividades;",
-                        "Deploy utilizando Vercel e AWS Amplify",
+                        "Deploy utilizando Vercel e AWS Amplify.",
                       ],
                     },
                   },
@@ -77,7 +77,31 @@ const messages = {
                         "Aprimoramento do sistema legado;",
                         "Correção de bugs e melhorias de arquitetura;",
                         "Metodologia SCRUM para desenvolvimento das atividades;",
-                        "Deploy utilizando Vercel e AWS Amplify",
+                        "Deploy utilizando Vercel e AWS Amplify.",
+                      ],
+                    },
+                  },
+                ],
+              },
+              {
+                name: "Grupo TB",
+                url: "https://grupotb.com.br/",
+                subItems: [
+                  {
+                    name: "Estagiário de Suporte Técnico",
+                    description: {
+                      name: "Estagiário de Suporte Técnico no ",
+                      organization: " Grupo TB",
+                      startDate: "Abr 2019",
+                      endDate: "Nov 2021",
+                      isFinished: true,
+                      activityDescription: [
+                        "Suporte técnico ao usuário em N1, N2 e N3. Atuando discretamente e presencialmente;",
+                        "Execução de projetos de melhoria de sistemas e ferramentas internas e externas;",
+                        "Adequação de rede e infraestrutura;",
+                        "Manutenção de equipamentos de TI;",
+                        "Gerenciamento de usuários via ambiente Active Directory;",
+                        "Gerenciamento de acesso em Linux: dhcp, squid, samba.",
                       ],
                     },
                   },
@@ -99,9 +123,9 @@ const messages = {
                   endDate: "Jul 2022",
                   isFinished: true,
                   activityDescription: [
-                    "Atualmente estou cursando o curso de Ciência da Computação, buscando me aprofundar cada vez mais na área de desenvolvimento de software.",
-                    "Já tive contato com diversas áreas da computação, desde suas bases teóricas até o desenvolvimento em si",
-                    "Ao longo do curso, terei contato com diversas áreas da computação, como desenvolvimento web, desenvolvimento mobile, desenvolvimento de jogos, inteligência artificial, entre outras.",
+                    "Sou bacharel em Sistemas de Informação, onde tive meus primeiros passo em programação estrutura de dados e gestão de projetos de software;",
+                    "Tive contato com varias linguagens de programação de diferentes area dentro de tecnologia, desde linguagens de código mais baixo ou alto nível;",
+                    "Ao longo do curso tive também contato com outras areas de tecnologia como redes, segurança da informação, gerenciamento e processamento de dados e etc.",
                   ],
                 },
               },

@@ -1,30 +1,40 @@
-"use client";
-
+import { useEffect } from "react";
 import Image from "next/image";
 
 import { FlagLanguageSelector } from "./styles";
 
+import { useTranslation } from "../../../../../context/TranslateContext";
 import { i18next } from "../../../../../translate/i18n";
 
 export function LangPicker() {
-  const handleSelectLanguage = () => {
-    const I18N_STORAGE_KEY = "i18nextLng";
+  const { getLanguageFromCookie, setLanguageCookie } = useTranslation();
 
-    if (i18next.t("navbar.language") === "english") {
-      localStorage.setItem(I18N_STORAGE_KEY, "ptBr");
-    } else {
-      localStorage.setItem(I18N_STORAGE_KEY, "enUs");
+  useEffect(() => {
+    const savedLanguage = getLanguageFromCookie();
+    if (savedLanguage) {
+      i18next.changeLanguage(savedLanguage);
     }
+  }, []);
 
-    window.location.reload();
+  const handleSelectLanguage = () => {
+    const newLanguage = i18next.language === "pt-BR" ? "en-US" : "pt-BR";
+    i18next.changeLanguage(newLanguage).then(() => window.location.reload());
+    setLanguageCookie(newLanguage);
   };
+
+  // function handleSelectLanguage() {
+  //   const language = i18next.language === "pt-BR" ? "en-US" : "pt-BR";
+  //   i18next.changeLanguage(language).then(() => window.location.reload());
+  // }
+
+  console.log(i18next.language);
 
   return (
     <FlagLanguageSelector>
       <Image
         onClick={handleSelectLanguage}
         src={
-          i18next.t("navbar.language") === "english"
+          i18next.language === "en-US"
             ? "/images/icons/united-states-icon.svg"
             : "/images/icons/brazilian-icon.svg"
         }
