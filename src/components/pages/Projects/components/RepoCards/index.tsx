@@ -72,6 +72,7 @@ export const RepoCards = () => {
                 width={600}
                 height={300}
                 alt={repo.name}
+                style={index % 2 === 0 ? { left: 0 } : { right: 0 }}
                 quality={100}
               />
 
