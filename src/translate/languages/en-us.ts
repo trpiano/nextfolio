@@ -1,5 +1,5 @@
 const messages = {
-    en: {
+    enUs: {
       translation: {
         navbar: {
           home: "Home",
@@ -15,21 +15,23 @@ const messages = {
           title: "Hi, I'm Timoteo Piano",
           description: "Front End | Full stack Developer 👨‍💻👋",
           curriculumButton: "My CV",
-          curriculumLink: process.env.NEXT_PUBLIC_CURRICULUM_PT_URL,
-          presentationVideo: process.env.NEXT_PUBLIC_PRESENTATION_VIDEO_PT_URL
+          curriculumLink: process.env.NEXT_PUBLIC_CURRICULUM_EN_URL,
+          presentationVideo: process.env.NEXT_PUBLIC_PRESENTATION_VIDEO_EN_URL
         },
         about: {
           title: 'About me',
           content: "Nice to meet you, my name is Timóteo, I'm 23 years old and I'm from Paraguaçu Paulista, but I currently live in Presidente Prudente, in the countryside of São Paulo. I graduated in Information System from Anhanguera University, where I completed the course through a PROUNI scholarship. I work as a front-end developer, using ReactJS, NextJS, Styled-Components and other libs. Always looking to improve myself in relation to the tools I work with and also to discover and learn new tools.",
         },
         skills: {
-          title: 'Habilidades',
+          title: 'Skills',
           frontEnd: 'Front-end',
           backEnd: 'Back-end',
           hostingPlatforms: 'Hosting Platforms',
           languages: 'Programming Languages',
           dataBases: 'Database',
-          versionControl: 'Version Control'
+          versionControl: 'Version Control',
+          IACPlatforms: 'IaC (Infrastructure as Code)',
+          cloudProviders: 'Cloud Providers'
         },
         career: {
           title: "Career",

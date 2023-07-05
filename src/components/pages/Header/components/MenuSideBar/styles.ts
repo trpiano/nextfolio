@@ -33,7 +33,7 @@ export const MenuContainer = styled.aside`
 
 export const Row = styled.div`
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
 
     width: 100%;

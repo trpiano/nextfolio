@@ -42,7 +42,7 @@ export function Header() {
             <span>{i18next.t("navbar.contact")}</span>
           </ContactButton>
 
-          {/* <LangPicker /> */}
+          <LangPicker />
         </ButtonContainer>
 
         <motion.button

@@ -1,26 +1,25 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { FlagLanguageSelector } from "./styles";
 
 import { i18next } from "../../../../../translate/i18n";
 
 export function LangPicker() {
-  // const handleSelectLanguage = () => {
-  //   const I18N_STORAGE_KEY = "i18nextLng";
+  const { locale, push } = useRouter();
 
-  //   if (i18next.t("navbar.language") === "english") {
-  //     localStorage.setItem(I18N_STORAGE_KEY, "ptBr");
-  //   } else {
-  //     localStorage.setItem(I18N_STORAGE_KEY, "enUs");
-  //   }
-
-  //   window.location.reload();
-  // };
+  const handleChangeLanguage = () => {
+    locale === "enUs"
+      ? (i18next.changeLanguage("ptBr"),
+        push(`/`, undefined, { locale: "ptBr" }))
+      : (i18next.changeLanguage("enUs"),
+        push(`/`, undefined, { locale: "enUs" }));
+  };
 
   return (
     <FlagLanguageSelector>
       <Image
-        // onClick={handleSelectLanguage}
+        onClick={handleChangeLanguage}
         src={
           i18next.t("navbar.language") === "english"
             ? "/images/icons/united-states-icon.svg"

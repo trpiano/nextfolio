@@ -60,7 +60,7 @@ export function Skills() {
 
         <ContentContainer>
           <Card>
-            <span>Front-end</span>
+            <span>{i18next.t('skills.frontEnd')}</span>
             <hr />
             <CardContainer>
               {frontEndSkillsData.map((item) => {
@@ -74,7 +74,7 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
-            <span>Plataformas de hospedagem</span>
+            <span>{i18next.t('skills.hostingPlatforms')}</span>
             <hr />
             <CardContainer>
               {hostingPlatformsSkillsData.map((item) => {
@@ -88,7 +88,7 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
-            <span>Linguagens de programação</span>
+            <span>{i18next.t('skills.languages')}</span>
             <hr />
             <CardContainer>
               {languages.map((item) => {
@@ -102,7 +102,7 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
-            <span>Banco de dados</span>
+            <span>{i18next.t('skills.dataBases')}</span>
             <hr />
             <CardContainer>
               {databases.map((item) => {
@@ -116,7 +116,7 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
-            <span>Back-end</span>
+            <span>{i18next.t('skills.backEnd')}</span>
             <hr />
             <CardContainer>
               {backEndSkillsData.map((item) => {
@@ -130,7 +130,7 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
-            <span>Controle de versão</span>
+            <span>{i18next.t('skills.versionControl')}</span>
             <hr />
             <CardContainer>
               {versionData.map((item) => {
@@ -144,7 +144,7 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
-            <span>IaC (Infraestrutura como código)</span>
+            <span>{i18next.t('skills.IACPlatforms')}</span>
             <hr />
             <CardContainer>
               {IaCData.map((item) => {
@@ -158,7 +158,7 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
-            <span>Provedores Cloud</span>
+            <span>{i18next.t('skills.cloudProviders')}</span>
             <hr />
             <CardContainer>
               {cloudPlatformsData.map((item) => {

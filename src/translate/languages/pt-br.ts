@@ -1,5 +1,5 @@
 const messages = {
-  pt: {
+  ptBr: {
     translation: {
       navbar: {
         home: "Inicio",
@@ -29,7 +29,9 @@ const messages = {
         hostingPlatforms: 'Plataformas de hospedagem',
         languages: 'Linguagens de programação',
         dataBases: 'Banco de dados',
-        versionControl: 'Controle de versão'
+        versionControl: 'Controle de versão',
+        IACPlatforms: 'IaC (Infraestrutura como código)',
+        cloudProviders: 'Provedores Cloud'
       },
       career: {
         title: "Carreira",

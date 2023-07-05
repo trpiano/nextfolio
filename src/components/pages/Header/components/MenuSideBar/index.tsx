@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 import { X } from "react-feather";
 import i18next from "i18next";
 
@@ -7,14 +9,20 @@ import { ButtonList, HeaderButton, MenuContainer, Row } from "./styles";
 import { menuItems } from "../../../../../constants/menuItems";
 
 import { useAppContext } from "../../../../../context/AppContext";
+import { useEffect } from "react";
 
 export function MenuSideBar() {
   const { menuIsOpen, setMenuIsOpen } = useAppContext();
+  const { locale } = useRouter();
+
+  useEffect(() => {
+    setMenuIsOpen(false)
+  },[locale])
 
   return (
     <MenuContainer style={menuIsOpen ? { right: 0 } : {}}>
       <Row>
-        {/* <LangPicker /> */}
+        <LangPicker />
 
         <button
           tabIndex={menuIsOpen ? 0 : -1}
