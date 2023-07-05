@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
+import GoogleAnalytics from "../components/GoogleAnalytics/googleAnalytics";
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -30,6 +32,7 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://timoteopiano.dev/" />
           <meta property="og:image" content="images/og.png" />
         </Head>
+        <GoogleAnalytics GA_TRACKING_ID={process.env.NEXT_PUBLIC_GA_TRACKING_ID} />
         <body>
           <Main />
           <NextScript />
