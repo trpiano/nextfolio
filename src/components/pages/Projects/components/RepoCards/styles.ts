@@ -21,7 +21,7 @@ export const Container = styled.div`
         height: 300px;
     
         object-fit: cover;
-        border-radius: 0.5rem;
+        border-radius: 1rem;
     }
 
     @media screen and (max-width: 800px) {
@@ -45,6 +45,12 @@ export const Container = styled.div`
   @media screen and (max-width: 800px) {
     width: 80%;
     border-radius: 0.5rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    .textGroup:first-child{
+      display: none;
+    }
   }
 `
 
@@ -114,6 +120,10 @@ export const Title = styled.div<TitleProps>`
     flex-direction: row;
 
     gap: 1rem;
+
+    @media screen and (max-width: 500px) {
+      gap: 0.5rem;
+    }
   }
 
   svg{
