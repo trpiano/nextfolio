@@ -49,7 +49,7 @@ export const BoxContainer = styled.div`
   h1 {
     color: var(--white);
 
-    font-size: 3,4375rem;
+    font-size: 3.25rem;
     font-weight: 700;
 
     margin: 1.5rem 0;
@@ -58,10 +58,14 @@ export const BoxContainer = styled.div`
   p {
     color: var(--white);
 
-    font-size: 1,875rem;
+    font-size: 1.675rem;
     font-weight: 300;
 
     margin: 1.5rem 0;
+  }
+
+  @media screen and (max-width: 1100px) {
+    padding: 0 1.5rem;
   }
 
   @media screen and (max-width: 500px) {
