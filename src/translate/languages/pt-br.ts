@@ -40,10 +40,10 @@ const messages = {
             list: [
               {
                 name: "KOR Solutions",
-                url: "https://kor.solutions/",
                 subItems: [
                   {
                     name: "Desenvolvedor Full-Stack",
+                    url: "https://kor.solutions/",
                     description: {
                       name: "Desenvolvedor Full-Stack na ",
                       organization: " KOR Solutions",
@@ -65,6 +65,7 @@ const messages = {
                   },
                   {
                     name: "Desenvolvedor Front-end",
+                    url: "https://kor.solutions/",
                     description: {
                       name: "Desenvolvedor Front-end na",
                       organization: " KOR Solutions",
@@ -85,10 +86,10 @@ const messages = {
               },
               {
                 name: "Grupo TB",
-                url: "https://grupotb.com.br/",
                 subItems: [
                   {
                     name: "Estagiário de Suporte Técnico",
+                    url: "https://grupotb.com.br/",
                     description: {
                       name: "Estagiário de Suporte Técnico no ",
                       organization: " Grupo TB",

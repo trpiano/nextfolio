@@ -18,7 +18,7 @@ export const MenuContainer = styled.aside`
     z-index: 2;
 
     background: linear-gradient(0deg, rgba(61,90,128,1) 14%, rgba(33,37,41,1) 100%);
-    box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: -0.25rem 0px 0.25rem rgba(0, 0, 0, 0.25);
 
     transition: all 0.2s ease-in;
 

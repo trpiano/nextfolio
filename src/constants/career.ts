@@ -1,6 +1,7 @@
 export type IDescription =
   | {
       name: string;
+      url?: string;
       organization: string;
       startDate: Date;
       isFinished: false;
@@ -8,6 +9,7 @@ export type IDescription =
     }
   | {
       name: string;
+      url?: string;
       organization: string;
       startDate: Date;
       endDate: Date;
@@ -17,10 +19,11 @@ export type IDescription =
 
 type ISubItems = {
   name: string;
+  url?: string;
   description: IDescription;
 };
 
-type IList = {
+export type IList = {
   name: string;
   url: string;
   description?: IDescription;
