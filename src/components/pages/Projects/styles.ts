@@ -17,7 +17,7 @@ export const Container = styled.div`
     letter-spacing: 0.5px;
     line-height: 100%;
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     font-weight: bold;
     font-size: 3.5rem;

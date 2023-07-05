@@ -22,7 +22,7 @@ export const HeaderContainer = styled.div`
     letter-spacing: 0.5px;
     line-height: 100%;
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     font-weight: bold;
     font-size: 3.5rem;
@@ -71,8 +71,8 @@ export const Card = styled.div`
   padding: 2rem 1rem;
 
   background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1,875rem rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -80,7 +80,7 @@ export const Card = styled.div`
   span{
     font-size: 1.5rem;
     font-weight: 700;
-    font-family: 'Roboto' ,sans-serif;
+    font-family: 'Roboto' , sans-serif;
   }
 
   hr{

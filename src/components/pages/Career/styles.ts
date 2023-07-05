@@ -24,7 +24,7 @@ export const Container = styled.section`
     letter-spacing: 0.5px;
     line-height: 100%;
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
+    font-size: 0,875rem;
 
     font-weight: bold;
     font-size: 3.5rem;
@@ -38,65 +38,6 @@ export const Container = styled.section`
   }
 
   @media screen and (max-width: 768px) {
-    .list {
-      width: 100%;
-      max-width: 100%;
-    }
-
-    .details {
-      width: 100%;
-    }
-  }
-`;
-
-export const ButtonsContainer = styled.section`
-  width: 100%;
-
-  display: flex;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-
-  width: fit-content;
-
-  gap: 0.75rem;
-
-  .buttonItem{
-    color: var(--white)
-  }
-
-  .backgroundButton {
-    transition: all 0.4s ease-in;
-    position: absolute;
-    height: 100%;
-
-    background: var(--blue-500);
-
-    border-radius: 2.5rem;
-  }
-
-  button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.5rem 1.5rem;
-
-    border: none;
-    background: transparent;
-
-    z-index: 1;
-
-    width: fit-content;
-    height: fit-content;
-
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 140%;
-
-    :focus-visible {
-      box-shadow: 0 0 0.25rem 2px var(--blue-500);
-      border-radius: 2.5rem;
-    }
   }
 `;
 
@@ -117,171 +58,58 @@ export const ExperiencesContainer = styled.section`
   }
 `;
 
-export const List = styled.ul`
-  width: 40%;
-  max-width: 350px;
+export const AcademicExperiences = styled.div`
+  width: 100%;
+  height: 300px;
 
-  list-style: var(--white); 
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent; 
 
-  .listItem {
-    width: 100%;
-    height: fit-content;
-
-    list-style: none;
-
-    border-left: 2px solid var(--gray-500);
-    color: var(--white);
-
-    button {
-      width: fit-content;
-
-      padding: 0.5rem 1.5rem;
-
-      color: var(--white);
-
-      font-weight: 500;
-      font-size: 1rem;
-      line-height: 140%;
-
-      text-align: start;
-
-      transition: all 0.2s ease-in;
-
-      :focus-visible {
-        box-shadow: 0 0 0.25rem 2px var(--blue-500);
-      }
-    }
+  ::-webkit-scrollbar {
+    width: 6px;
   }
 
-  .activeItem {
-    border-left: 2px solid var(--blue-500);
-
-    > button:first-child {
-      color: var(--blue-500);
-    }
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
   }
 
-  @media screen and (max-width: 768px) {
-    width: 100%;
-    max-width: 100%;
-
-    .details {
-      width: 100%;
-    }
-  }
-`;
-
-export const DetailsContainer = styled.section`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  width: 60%;
-
-  .detailsTitle {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-
-    h3 {
-      font-weight: 700;
-      font-size: 1.125rem;
-      line-height: 150%;
-
-      color: #fff;
-
-      a {
-        color: var(--blue-500);
-
-        text-decoration: none;
-
-        :focus-visible {
-          box-shadow: 0 0 0.25rem 2px var(--blue-500);
-        }
-      }
-    }
-
-    span {
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 150%;
-
-      color: var(--blue-500);
-    }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
   }
 
-  .detailsDescription {
-    li {
-      margin-left: 1rem;
-      list-style: disc;
-      color: var(--blue-500);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1,875rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+`
 
-      li {
-        margin-top: 0.75rem;
-      }
+export const WorkExperiences = styled.div`
+  width: 100%;
+  height: 300px;
 
-      p {
-        font-weight: 500;
-        font-size: 1.125rem;
-        line-height: 150%;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 
-        color: var(--white);
-      }
-    }
+  ::-webkit-scrollbar {
+    width: 6px;
   }
 
-  @media screen and (max-width: 600px) {
-    width: fit-content;
-  }
-`;
-
-export const SubList = styled.ul`
-  .subListItem {
-    width: calc(100% - rem);
-    height: fit-content;
-
-    list-style: circle;
-    margin: 0 2rem;
-
-    transition: all 0.2s ease-in;
-
-    button {
-      display: flex;
-      justify-content: flex-start;
-
-      width: 100%;
-
-      padding: 0.5rem 0;
-
-      text-align: start;
-
-      font-weight: 500;
-      font-size: 1rem;
-      line-height: 140%;
-
-      transition: all 0.2s ease-in;
-
-      :focus-visible {
-        box-shadow: 0 0 0.25rem 2px var(--blue-500);
-      }
-    }
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent;
   }
 
-  .activeSubItem {
-    color: var(--blue-500);
-
-    button:first-child {
-      color: var(--blue-500);
-    }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
   }
-`;
 
-export const BackGroundButton = styled.div`
-  transition: all 0.2s ease-in;
-  position: absolute;
-  height: 100%;
-
-  background: var(--blue-500);
-
-  border-radius: 2.5rem;
-`;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1,875rem rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+`
