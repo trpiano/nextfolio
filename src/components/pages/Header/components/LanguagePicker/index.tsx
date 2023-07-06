@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 
 import { FlagLanguageSelector } from "./styles";
@@ -11,8 +12,10 @@ export function LangPicker() {
   const handleChangeLanguage = () => {
     locale === "enUs"
       ? (i18next.changeLanguage("ptBr"),
+        Cookies.set("i18nextLng", "ptBr"),
         push(`/`, undefined, { locale: "ptBr" }))
       : (i18next.changeLanguage("enUs"),
+        Cookies.set("i18nextLng", "enUs"),
         push(`/`, undefined, { locale: "enUs" }));
   };
 
