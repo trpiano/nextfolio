@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
           />
 
           <meta name="msapplication-TileColor" content="#da532c" />
-          <meta name="theme-color" content="#ffffff" />
+          <meta name="theme-color" content="#3D5A80" />
 
           <meta property="og:site_name" content="Timóteo Piano | Front-End & Full-Stack Developer" />
           <meta property="og:type" content="website" />
