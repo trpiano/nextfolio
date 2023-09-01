@@ -70,7 +70,7 @@ export const RepoData = styled.section`
   box-shadow: 0 0.25rem 1,875rem rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid var(--black);;
+  border: 1px solid var(--black);
 
   span,
   p {

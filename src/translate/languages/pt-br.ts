@@ -41,6 +41,30 @@ const messages = {
             optionName: "Experiência",
             list: [
               {
+                name: "Marcenaria Diferente",
+                subItems: [
+                  {
+                    name: "Desenvolvedor Full-Stack",
+                    url: "https://marcenariadiferente.com/",
+                    description: {
+                      name: "Desenvolvedor Full-Stack na ",
+                      organization: " Marcenaria Diferente",
+                      startDate: "Ago 2023",
+                      endDate: "",
+                      isFinished: false,
+                      activityDescription: [
+                        "Desenvolvimento de back-end com TS e Swagger;",
+                        "Desenvolvimento de novas features para o sistema usando VueJS e ReactJS;",
+                        "Integração com APIs Rest;",
+                        "Aprimoramento do sistema legado;",
+                        "Correção de bugs e melhorias de arquitetura;",
+                        "Metodologia SCRUM para desenvolvimento das atividades;",
+                      ],
+                    },
+                  },
+                ],
+              },
+              {
                 name: "KOR Solutions",
                 subItems: [
                   {

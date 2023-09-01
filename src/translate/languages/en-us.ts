@@ -41,6 +41,30 @@ const messages = {
             optionName: "Experience",
             list: [
               {
+                name: "Marcenaria Diferente",
+                subItems: [
+                  {
+                    name: "Full Stack Developer",
+                    url: "https://marcenariadiferente.com/",
+                    description: {
+                      name: "Full-Stack Developer at ",
+                      organization: "Marcenaria Diferente",
+                      startDate: "Aug 2023",
+                      endDate: "",
+                      isFinished: false,
+                      activityDescription: [
+                        "Backend development with TS e Swagger;",
+                        "Development of new features for the system using VueJS and ReactJS;",
+                        "Integration with Rest APIs;",
+                        "Legacy system enhancement;",
+                        "Bug fixes and architecture improvements;",
+                        "SCRUM methodology for the development of activities;",
+                      ],
+                    },
+                  },
+                ],
+              },
+              {
                 name: "KOR Solutions",
                 subItems: [
                   {
