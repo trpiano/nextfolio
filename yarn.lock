@@ -1760,23 +1760,6 @@ next@12.2:
     "@next/swc-win32-ia32-msvc" "12.2.6"
     "@next/swc-win32-x64-msvc" "12.2.6"
 
-node-bin-setup@^1.0.0:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/node-bin-setup/-/node-bin-setup-1.1.3.tgz#d45d5220e3b2ecc3a94263a56116f727f6c1bb14"
-  integrity sha512-opgw9iSCAzT2+6wJOETCpeRYAQxSopqQ2z+N6BXwIMsQQ7Zj5M8MaafQY8JMlolRR6R1UXg2WmhKp0p9lSOivg==
-
-node@^20.5.1:
-  version "20.5.1"
-  resolved "https://registry.yarnpkg.com/node/-/node-20.5.1.tgz#6aac0f0ca6c54ce193975d219ebda4ac456b9944"
-  integrity sha512-+eCQv0CdKRzBK1eeMfE8VBEHHn+aDMTLEdIQyDobwEZlN2tatpc8ZFvVLbdztB6VbBCItxd2n6rGaj+tgxMLYA==
-  dependencies:
-    node-bin-setup "^1.0.0"
-
-nodejs@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.yarnpkg.com/nodejs/-/nodejs-0.0.0.tgz#4722fa2e18ac4eb73a42ae16d01e3584a12b7531"
-  integrity sha512-1V+0HwaB/dhxzidEFc4uJ3k52gLI4B6YBZgJIofjwYCSAkD6CI0me6TDBT2QM2nbGWNxCHcq9/wVynzQYZOhUg==
-
 object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
