@@ -20,7 +20,7 @@ const messages = {
       },
       about: {
         title: 'Sobre mim',
-        content: "Prazer, me chamo Timóteo, tenho 23 anos e sou natural de Paraguaçu Paulista, mas atualmente moro em Presidente Prudente, interior de São Paulo. Sou formado em Sistema de Informação de Universidade Anhanguera, onde conclui o curso por uma bolsa integrar do PROUNI. Atuo como desenvolvedor front-end, utilizando ReactJS, NextJS, Styled-Components e outros libs. Sempre buscando me aprimorar em relação às ferramentas que trabalho e também a descobrir e aprender novas ferramentas.",
+        content: "Prazer, me chamo Timóteo, tenho 23 anos e sou natural de Paraguaçu Paulista, mas atualmente moro em Presidente Prudente, interior de São Paulo. Sou formado em Sistema de Informação de Universidade Anhanguera, onde conclui o curso por uma bolsa integral do PROUNI. Atuo como desenvolvedor front-end, utilizando ReactJS, NextJS, Styled-Components e outros libs. Sempre buscando me aprimorar em relação às ferramentas que trabalho e também a descobrir e aprender novas ferramentas.",
       },
       skills: {
         title: 'Habilidades',

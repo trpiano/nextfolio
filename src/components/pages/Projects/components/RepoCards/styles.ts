@@ -37,7 +37,7 @@ export const Container = styled.div`
 
   .textGroup {
     display: flex;
-    align-items: center;
+    align-items: center;    
 
     gap: 0.5rem;
   }
@@ -70,7 +70,7 @@ export const RepoData = styled.section`
   box-shadow: 0 0.25rem 1,875rem rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--black);
 
   span,
   p {
@@ -78,7 +78,7 @@ export const RepoData = styled.section`
     font-size: 1rem;
     line-height: 150%;
 
-    color: var(--white);
+    color: var(--black);
 
     overflow: hidden;
     text-overflow: ellipsis;
