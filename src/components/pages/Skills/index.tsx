@@ -40,7 +40,7 @@ export function Skills() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/skills"
+          "https://nextfolio-db.vercel.app/api/skills"
         );
 
         setValuesOnState(response.data)
