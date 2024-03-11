@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Image from "next/image";
 
 import { i18next } from "../../../translate/i18n";
 
@@ -23,6 +22,7 @@ export function Skills() {
   const [versionData, setVersionData] = useState([]);
   const [IaCData, setIaCData] = useState([])
   const [cloudPlatformsData, setCloudPlatformsData] = useState([])
+  const [testingLibs, setTestingLibs] = useState([])
 
   function setValuesOnState(response) {
     setFrontEndSkillsData(response.frontend);
@@ -33,13 +33,14 @@ export function Skills() {
     setVersionData(response.versionControl);
     setIaCData(response.IaC)
     setCloudPlatformsData(response.cloudPlatforms)
+    setTestingLibs(response.testingLibs)
   }
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://nextfolio-db.vercel.app/api/skills"
+          "http://localhost:3000/api/skills"
         );
 
         setValuesOnState(response.data)
@@ -74,10 +75,10 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
-            <span>{i18next.t('skills.hostingPlatforms')}</span>
+            <span>{i18next.t('skills.backEnd')}</span>
             <hr />
             <CardContainer>
-              {hostingPlatformsSkillsData.map((item) => {
+              {backEndSkillsData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
                     <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
@@ -102,6 +103,20 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
+            <span>{i18next.t('skills.testingLibs')}</span>
+            <hr />
+            <CardContainer>
+              {testingLibs.map((item) => {
+                return (
+                  <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
+                    <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <p>{item.skillName}</p>
+                  </CardContent>
+                );
+              })}
+            </CardContainer>
+          </Card>
+          <Card>
             <span>{i18next.t('skills.dataBases')}</span>
             <hr />
             <CardContainer>
@@ -116,10 +131,10 @@ export function Skills() {
             </CardContainer>
           </Card>
           <Card>
-            <span>{i18next.t('skills.backEnd')}</span>
+            <span>{i18next.t('skills.hostingPlatforms')}</span>
             <hr />
             <CardContainer>
-              {backEndSkillsData.map((item) => {
+              {hostingPlatformsSkillsData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
                     <img src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
