@@ -29,8 +29,9 @@ const messages = {
         hostingPlatforms: 'Hosting Platforms',
         languages: 'Programming Languages',
         dataBases: 'Database',
+        testingLibs: 'Testing Tools',
         versionControl: 'Version Control',
-        IACPlatforms: 'IaC (Infrastructure as Code)',
+        IACPlatforms: 'Infrastructure',
         cloudProviders: 'Cloud Providers'
       },
       career: {
@@ -40,6 +41,31 @@ const messages = {
           {
             optionName: "Experience",
             list: [
+              {
+                name: "Marcenaria Diferente",
+                subItems: [
+                  {
+                    name: "Full Stack Developer",
+                    url: "https://app.marcenariadiferente.com/",
+                    description: {
+                      name: "Full-Stack Developer at ",
+                      organization: " Marcenaria Diferente",
+                      startDate: "Aug 2023",
+                      endDate: "Feb 2024",
+                      isFinished: true,
+                      activityDescription: [
+                        "Development of new features for the system using VueJS and ReactJS;",
+                        "Back-end development with NodeJs, TypeScript and OOP;",
+                        "Integration with Rest APIs;",
+                        "Bug fixes;",
+                        "SCRUM methodology for the development of activities;",
+                        "Building 3D models using ThreeJS;",
+                        "Use of relational and non-relational data bases.",
+                      ],
+                    },
+                  },
+                ],
+              },
               {
                 name: "KOR Solutions",
                 subItems: [

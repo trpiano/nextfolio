@@ -26,11 +26,12 @@ const messages = {
         title: 'Habilidades',
         frontEnd: 'Front-end',
         backEnd: 'Back-end',
-        hostingPlatforms: 'Plataformas de hospedagem',
-        languages: 'Linguagens de programação',
-        dataBases: 'Banco de dados',
-        versionControl: 'Controle de versão',
-        IACPlatforms: 'IaC (Infraestrutura como código)',
+        hostingPlatforms: 'Plataformas de Hospedagem',
+        languages: 'Linguagens de Programação',
+        dataBases: 'Banco de Dados',
+        testingLibs: 'Ferramentas de Teste',
+        versionControl: 'Controle de Versão',
+        IACPlatforms: 'Infraestrutura',
         cloudProviders: 'Provedores Cloud'
       },
       career: {
@@ -40,6 +41,31 @@ const messages = {
           {
             optionName: "Experiência",
             list: [
+              {
+                name: "Marcenaria Diferente",
+                subItems: [
+                  {
+                    name: "Desenvolvedor Full-Stack",
+                    url: "https://app.marcenariadiferente.com/",
+                    description: {
+                      name: "Desenvolvedor Full-Stack na ",
+                      organization: " Marcenaria Diferente",
+                      startDate: "Aug 2023",
+                      endDate: "Fev 2024",
+                      isFinished: true,
+                      activityDescription: [
+                        "Desenvolvimento de novas funcionalidades para o sistema utilizando VueJS e ReactJS;",
+                        "Desenvolvimento back-end com NodeJs, TypeScript e POO;",
+                        "Integração com APIs Rest;",
+                        "Correções de bugs;",
+                        "Metodologia SCRUM para desenvolvimento de atividades;",
+                        "Construindo modelos 3D usando ThreeJS;",
+                        "Uso de bancos de dados relacionais e não relacionais.",
+                      ],
+                    },
+                  },
+                ],
+              },
               {
                 name: "KOR Solutions",
                 subItems: [
