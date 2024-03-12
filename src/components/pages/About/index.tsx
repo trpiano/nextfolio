@@ -1,4 +1,4 @@
-import Lottie from "react-lottie";
+import * as LottiePlayer from "@lottiefiles/lottie-player";
 
 import animationComputer from "../../../assets/animations/computer.json";
 
@@ -44,7 +44,7 @@ export function About() {
         </HeaderContainer>
         <ContentContainer>
           <AnimationContainer>
-            <Lottie
+            <lottie-player
               options={defaultOptions}
               height={animationHeight}
               width={animationWidth}

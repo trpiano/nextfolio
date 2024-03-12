@@ -1,3 +1,24 @@
+const birthYear: number = 1999;
+const birthDate: Date = new Date(birthYear, 11, 30);
+
+function getCurrentAge(): number {
+  const currentDate: Date = new Date();
+  const birthDateCopy: Date = new Date(birthDate.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+
+  if (currentDate < birthDateCopy) {
+    birthDateCopy.setFullYear(birthDateCopy.getFullYear() - 1);
+  }
+
+  const age: number = currentDate.getFullYear() - birthDateCopy.getFullYear();
+  const monthDiff: number = currentDate.getMonth() - birthDateCopy.getMonth();
+
+  if (monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < birthDateCopy.getDate())) {
+    return age - 1;
+  } else {
+    return age;
+  }
+}
+
 const messages = {
   ptBr: {
     translation: {
@@ -20,7 +41,7 @@ const messages = {
       },
       about: {
         title: 'Sobre mim',
-        content: "Prazer, me chamo Timóteo, tenho 23 anos e sou natural de Paraguaçu Paulista, mas atualmente moro em Presidente Prudente, interior de São Paulo. Sou formado em Sistema de Informação de Universidade Anhanguera, onde conclui o curso por uma bolsa integral do PROUNI. Atuo como desenvolvedor front-end, utilizando ReactJS, NextJS, Styled-Components e outros libs. Sempre buscando me aprimorar em relação às ferramentas que trabalho e também a descobrir e aprender novas ferramentas.",
+        content: `Prazer, me chamo Timóteo, tenho ${getCurrentAge()} anos e sou natural de Paraguaçu Paulista, atualmente moro em Presidente Prudente, interior de São Paulo. Sou formado em Sistema de Informação de Universidade Anhanguera, onde conclui o curso por uma bolsa integral do PROUNI. Atuo como desenvolvedor front-end | full-stack, utilizando ReactJS, NextJS, VueJS, NodeJS, AWS e outros. Sempre buscando me aprimorar em relação às ferramentas que trabalho e também a descobrir e aprender novas ferramentas.`,
       },
       skills: {
         title: 'Habilidades',

@@ -1,3 +1,24 @@
+const birthYear: number = 1999;
+const birthDate: Date = new Date(birthYear, 10, 30);
+
+function getCurrentAge(): number {
+  const currentDate: Date = new Date();
+  const birthDateCopy: Date = new Date(birthDate.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+
+  if (currentDate < birthDateCopy) {
+    birthDateCopy.setFullYear(birthDateCopy.getFullYear() - 1);
+  }
+  const age: number = currentDate.getFullYear() - birthDateCopy.getFullYear();
+  const monthDiff: number = currentDate.getMonth() - birthDateCopy.getMonth();
+  
+  if (monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < birthDateCopy.getDate())) {
+    return age - 1;
+  } else {
+    return age;
+  }
+}
+
+
 const messages = {
   enUs: {
     translation: {
@@ -20,7 +41,7 @@ const messages = {
       },
       about: {
         title: 'About me',
-        content: "Nice to meet you, my name is Timóteo, I'm 23 years old, and I'm originally from Paraguaçu Paulista, but currently living in Presidente Prudente, São Paulo's countryside. I hold a degree in Information Systems from Anhanguera University, where I completed the course through an integrated PROUNI scholarship. I work as a front-end developer, using ReactJS, NextJS, Styled-Components, and other libraries. I'm always striving to improve my skills with the tools I work with and constantly discovering and learning new ones.",
+        content: `Nice to meet you, my name is Timóteo, I'm ${getCurrentAge()} years old and I'm from Paraguaçu Paulista, I currently live in Presidente Prudente, in the interior of São Paulo. I graduated from the Information System at Universidade Anhanguera, where I completed the course with a full scholarship from PROUNI. I work as a front-end developer | full-stack, using ReactJS, NextJS, VueJS, NodeJS, AWS and others. Always looking to improve myself in relation to the tools I work with and also to discover and learn new tools.`,
       },
       skills: {
         title: 'Skills',

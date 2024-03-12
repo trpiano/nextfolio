@@ -1,0 +1,9 @@
+services:
+  nextfolio-spa:
+    container_name: nextfolio-spa
+    build: ./
+    volumes:
+      -spa-volume:/var/www/html
+
+volumes:
+  spa-volume:
