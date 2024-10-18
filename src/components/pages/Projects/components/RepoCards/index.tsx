@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { format } from "date-fns";
 
@@ -19,32 +19,30 @@ export const RepoCards = () => {
     []
   );
 
+  const REFRESH_INTERVAL = 1000 * 60 * 60; // 1 hora
+
   const fetcher = (url) => fetch(url).then((res) => res.json());
 
   const { data } = useSWR(
     `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos`,
     fetcher,
     {
-      refreshInterval: 1000 * 60 * 60, //1 hour
+      refreshInterval: REFRESH_INTERVAL,
     }
   );
 
-  const getGithubRepos = () => {
-    const githubReposData: IGithubRepository[] = data
-      ?.filter((repo: IGithubRepository) => {
-        return (
-          repo.description !== null && repo.topics.includes("project-image")
-        );
-      })
+  const filterAndOrderRepos = (repos: IGithubRepository[]): IGithubRepository[] => {
+    return repos
+      ?.filter((repo) => repo.description !== null && repo.topics.includes("project-image"))
       .reverse()
       .slice(0, 3);
-
-    setGithubReposData(githubReposData);
   };
 
+  const githubRepos = useMemo(() => filterAndOrderRepos(data), [data]);
+
   useEffect(() => {
-    getGithubRepos();
-  }, [data]);
+    setGithubReposData(githubRepos);
+  }, [githubRepos]);
 
   return (
     <>
