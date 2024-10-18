@@ -44,6 +44,7 @@ export function Introduction() {
 
         <HeroContainer>
           <Image
+            priority
             src="/images/profile.png"
             alt="Profile Image"
             width={450}

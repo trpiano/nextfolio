@@ -5,7 +5,7 @@ import { messages } from '.'
 i18next
     .init({
         debug: false,
-        fallbackLng: 'ptBr',
+        fallbackLng: 'enUs',
         resources: messages
     })
 

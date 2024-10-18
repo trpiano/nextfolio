@@ -1,6 +1,7 @@
-import * as LottiePlayer from "@lottiefiles/lottie-player";
+import { i18next } from "../../../translate/i18n";
+import { motion } from "framer-motion";
 
-import animationComputer from "../../../assets/animations/computer.json";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import {
   Container,
@@ -11,22 +12,7 @@ import {
   AnimationContainer,
 } from "./styles";
 
-import { i18next } from "../../../translate/i18n";
-import { motion } from "framer-motion";
-
 export function About() {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationComputer,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-
-  const animationWidth = "100%";
-  const animationHeight = "100%";
-
   return (
     <Container id="about">
       <MainContent>
@@ -44,10 +30,10 @@ export function About() {
         </HeaderContainer>
         <ContentContainer>
           <AnimationContainer>
-            <lottie-player
-              options={defaultOptions}
-              height={animationHeight}
-              width={animationWidth}
+          <DotLottieReact
+              src="https://lottie.host/embed/fa688dec-731a-4c13-a0b8-0b8af46af466/iKXyQEzyve.lottie"
+              loop
+              autoplay
             />
           </AnimationContainer>
           <TextContainer>
