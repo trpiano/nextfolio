@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+// import { useEffect, useState } from "react";
+// import axios from "axios";
 
 import { i18next } from "../../../translate/i18n";
 import { motion } from "framer-motion";
