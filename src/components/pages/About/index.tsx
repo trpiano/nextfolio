@@ -1,7 +1,10 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import { i18next } from "../../../translate/i18n";
 import { motion } from "framer-motion";
 
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 import {
   Container,
@@ -9,10 +12,28 @@ import {
   HeaderContainer,
   ContentContainer,
   TextContainer,
-  AnimationContainer,
+  // AnimationContainer,
 } from "./styles";
 
 export function About() {
+  // const [animationData, setAnimationData] = useState("")
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         "https://nextfolio-db.vercel.app/api/animations"
+  //       );
+
+  //       setAnimationData(response.data.about.aboutAnimation)
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+
   return (
     <Container id="about">
       <MainContent>
@@ -29,13 +50,13 @@ export function About() {
           </motion.h2>
         </HeaderContainer>
         <ContentContainer>
-          <AnimationContainer>
+          {/* <AnimationContainer>
           <DotLottieReact
-              src="https://lottie.host/embed/fa688dec-731a-4c13-a0b8-0b8af46af466/iKXyQEzyve.lottie"
+              src={animationData ?? ''}
               loop
               autoplay
             />
-          </AnimationContainer>
+          </AnimationContainer> */}
           <TextContainer>
             <p>{i18next.t("about.content")}</p>
           </TextContainer>
