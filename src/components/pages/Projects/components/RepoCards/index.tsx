@@ -71,7 +71,8 @@ export const RepoCards = () => {
                 alt={repo.name}
                 style={index % 2 === 0 ? { left: 0 } : { right: 0 }}
                 onError={(e) => {
-                  e.target.src = `https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${repo.name}/main/.github/img_1.jpeg`;
+                  const imageElement = e.target as HTMLImageElement;
+                  imageElement.src = `https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${repo.name}/main/.github/img_1.jpeg`;
                 }}
               />
 
