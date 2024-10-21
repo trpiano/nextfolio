@@ -70,6 +70,9 @@ export const RepoCards = () => {
                 height={300}
                 alt={repo.name}
                 style={index % 2 === 0 ? { left: 0 } : { right: 0 }}
+                onError={(e) => {
+                  e.target.src = `https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${repo.name}/main/.github/img_1.jpeg`;
+                }}
               />
 
               <RepoData style={index % 2 === 0 ? { right: 0 } : { left: 0 }}>
@@ -78,7 +81,7 @@ export const RepoCards = () => {
                     <IsInDevelopment>
                       <Loader />
 
-                      <span>{i18next.t('projects.isInDevelopment')}</span> 
+                      <span>{i18next.t('projects.isInDevelopment')}</span>
                     </IsInDevelopment>
                   ) : <></>}
                   <div className="elementsGroup">
