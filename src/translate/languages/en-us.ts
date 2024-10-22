@@ -47,6 +47,7 @@ const messages = {
         title: 'Skills',
         frontEnd: 'Front-end',
         backEnd: 'Back-end',
+        mobile: 'Mobile',
         hostingPlatforms: 'Hosting Platforms',
         languages: 'Programming Languages',
         dataBases: 'Database',

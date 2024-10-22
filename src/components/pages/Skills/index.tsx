@@ -17,6 +17,7 @@ import Image from "next/image";
 export function Skills() {
   const [frontEndSkillsData, setFrontEndSkillsData] = useState([]);
   const [backEndSkillsData, setBackEndSkillsData] = useState([]);
+  const [mobileSkillsData, setMobileSkillsData] = useState([]);
   const [hostingPlatformsSkillsData, setHostingPlatformsSkillsData] = useState([]);
   const [languages, setLanguages] = useState([]);
   const [databases, setDatabases] = useState([]);
@@ -28,6 +29,7 @@ export function Skills() {
   function setValuesOnState(response) {
     setFrontEndSkillsData(response.frontend);
     setBackEndSkillsData(response.backend);
+    setMobileSkillsData(response.mobile);
     setHostingPlatformsSkillsData(response.hostingPlatforms);
     setLanguages(response.programmingLanguages);
     setDatabases(response.databases);
@@ -80,6 +82,20 @@ export function Skills() {
             <hr />
             <CardContainer>
               {backEndSkillsData.map((item) => {
+                return (
+                  <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
+                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <p>{item.skillName}</p>
+                  </CardContent>
+                );
+              })}
+            </CardContainer>
+          </Card>
+          <Card>
+            <span>{i18next.t('skills.mobile')}</span>
+            <hr />
+            <CardContainer>
+              {mobileSkillsData && mobileSkillsData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
                     <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />

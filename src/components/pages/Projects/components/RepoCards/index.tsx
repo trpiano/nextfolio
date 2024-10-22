@@ -13,6 +13,7 @@ import useSWR from "swr";
 import { Container, Footer, Main, RepoData, Title, IsInDevelopment } from "./styles";
 import { githubColorLanguages } from "../../constants";
 import i18next from "i18next";
+import Image from "next/image";
 
 export const RepoCards = () => {
   const [githubReposData, setGithubReposData] = useState<IGithubRepository[]>(
@@ -64,7 +65,7 @@ export const RepoCards = () => {
                 hidden: { opacity: 1, x: 0 },
               }}
             >
-              <img
+              <Image
                 className="repoImage"
                 src={`https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${repo.name}/refs/heads/${repo.default_branch}/.github/img_1.png`}
                 width={600}
