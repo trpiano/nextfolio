@@ -34,8 +34,9 @@ export const RepoCards = () => {
   const filterAndOrderRepos = (repos: IGithubRepository[]): IGithubRepository[] => {
     return repos
       ?.filter((repo) => repo.description !== null && repo.topics.includes("project-image"))
+      .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
       .reverse()
-      .slice(0, 3);
+      .slice(0, 4);
   };
 
   const githubRepos = useMemo(() => filterAndOrderRepos(data), [data]);
@@ -65,15 +66,11 @@ export const RepoCards = () => {
             >
               <img
                 className="repoImage"
-                src={`https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${repo.name}/main/.github/img_1.png`}
+                src={`https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${repo.name}/refs/heads/${repo.default_branch}/.github/img_1.png`}
                 width={600}
                 height={300}
                 alt={repo.name}
                 style={index % 2 === 0 ? { left: 0 } : { right: 0 }}
-                onError={(e) => {
-                  const imageElement = e.target as HTMLImageElement;
-                  imageElement.src = `https://raw.githubusercontent.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/${repo.name}/main/.github/img_1.jpeg`;
-                }}
               />
 
               <RepoData style={index % 2 === 0 ? { right: 0 } : { left: 0 }}>
