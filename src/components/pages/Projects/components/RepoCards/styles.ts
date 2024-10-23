@@ -13,7 +13,7 @@ export const Container = styled.div`
     position: relative;
 
     width: 100%;
-    height: 300px;
+    height: 400px;
 
     .repoImage {
         position: absolute;
@@ -26,11 +26,11 @@ export const Container = styled.div`
 
     @media screen and (max-width: 800px) {
       flex-direction: column;
-      height: 10.25rem;
+      height: 14.25rem;
 
       .repoImage {
         width: 100%;
-        height: 10.25rem;
+        height: 14.25rem;
       }
     }
   }
@@ -78,7 +78,7 @@ export const RepoData = styled.section`
     font-size: 1rem;
     line-height: 150%;
 
-    color: var(--black);
+    color: var(--gray-800);
 
     overflow: hidden;
     text-overflow: ellipsis;
@@ -92,9 +92,9 @@ export const RepoData = styled.section`
 
   @media screen and (max-width: 800px) {
     width: 100%;
-    height: 10.25rem;
+    height: 14.25rem;
 
-    background-color: var(--gray-200-80);
+    background-color: transparent;
   }
 `;
 
@@ -166,6 +166,56 @@ export const Main = styled.div`
   flex-direction: column;
 
   gap: 0.5rem;
+`
+
+export const UsedTechs = styled.div`
+  height: 60px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  gap: 1rem;
+
+  @media screen and (max-width: 950px) {
+    overflow-y: hidden;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+`
+
+export const TechCard = styled.a`
+background-color: rgba(255, 255, 255, 0.2);
+box-shadow: 0 0.25rem 1,875rem rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+
+padding: 0.5rem 1rem;
+
+height: 40px;
+width: fit-content;
+
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+
+gap: 0.5rem;
+
+color: var(--white);
+
+border-radius: 0.5rem;
+
+text-decoration: none;
+
+transition: 0.2s;
+
+:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 `
 
 export const Footer = styled.div`

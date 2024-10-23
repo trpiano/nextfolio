@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -12,7 +13,6 @@ import {
   HeaderContainer,
   MainContent,
 } from "./styles";
-import Image from "next/image";
 
 export function Skills() {
   const [frontEndSkillsData, setFrontEndSkillsData] = useState([]);
