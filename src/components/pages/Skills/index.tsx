@@ -25,6 +25,8 @@ export function Skills() {
   const [IaCData, setIaCData] = useState([])
   const [cloudPlatformsData, setCloudPlatformsData] = useState([])
   const [testingLibs, setTestingLibs] = useState([])
+  
+  const APIUrl = process.env.NEXT_PUBLIC_SERVER_URL
 
   function setValuesOnState(response) {
     setFrontEndSkillsData(response.frontend);
@@ -43,7 +45,7 @@ export function Skills() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "https://nextfolio-db.vercel.app/api/skills"
+          APIUrl ?? ""
         );
 
         setValuesOnState(response.data)
@@ -70,7 +72,7 @@ export function Skills() {
               {frontEndSkillsData.map((item) => {
                 return (
                   <CardContent key={item.skillName} href={item.link} target="_blank" rel="noopener noreferrer">
-                    <Image src={item.imgSrc} alt={item.imgAltText} height={40} width={40} />
+                    <Image src={`${APIUrl}${item.imgSrc}`} alt={item.imgAltText} height={40} width={40} />
                     <p>{item.skillName}</p>
                   </CardContent>
                 );
