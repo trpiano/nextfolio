@@ -44,9 +44,11 @@ export function Skills() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          APIUrl ?? ""
-        );
+        if (!APIUrl) {
+          throw new Error("APIUrl não definida");
+        }
+
+        const response = await axios.get(`${APIUrl}/api/skills`);
 
         setValuesOnState(response.data)
       } catch (error) {
