@@ -136,9 +136,11 @@ export const RepoCards = () => {
 
                   <UsedTechs>
                     {filteredTechs.map((tech, index: number) => {
+                      const APIUrl = process.env.NEXT_PUBLIC_SERVER_URL
+
                       return(
                         <TechCard key={index} href={tech.link} target="_blank" rel="noopener noreferrer">
-                            <Image src={tech.imgSrc} alt={tech.imgAltText} height={30} width={30} />
+                            <Image src={`${APIUrl}${tech.imgSrc}`} alt={tech.imgAltText} height={30} width={30} />
                             <p>{tech.imgAltText}</p>
                         </TechCard>
                       )
